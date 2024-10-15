@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { SpeedInsights } from '@vercel/speed-insights/vue';
+import {SpeedInsights} from '@vercel/speed-insights/vue';
 </script>
 
 <template>
-  <SpeedInsights />
-  <slot />
+  <SpeedInsights/>
+  <div class="font-league-spartan">
+    <slot/>
+  </div>
 </template>
