@@ -4,7 +4,7 @@ import {SpeedInsights} from '@vercel/speed-insights/vue';
 
 <template>
   <SpeedInsights/>
-  <div class="font-league-spartan">
+  <div class="">
     <slot/>
   </div>
 </template>

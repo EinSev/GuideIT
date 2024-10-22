@@ -25,10 +25,10 @@ export default {
                 '700': '#4f4f4f',
                 '800': '#454545',
                 '900': '#3d3d3d',
-                '950': '#030303',
+                'default': '#030303',
             },
             'background': {
-                '50': '#fcfcfc',
+                'default': '#fcfcfc',
                 '100': '#efefef',
                 '200': '#dcdcdc',
                 '300': '#bdbdbd',
