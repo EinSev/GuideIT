@@ -1,17 +1,20 @@
 <script setup>
 useHead({
   title: "GuideIT",
+  htmlAttrs: {
+    lang: 'de'
+  },
   meta: [{
-    name: 'GuideIT',
+    name: 'description',
     content: "Die Entscheidungshilfe der HTL Rennweg"
   }]
 })
 </script>
 
 <template>
-  <div class="flex flex-col bg-white-default text-black-default">
+  <div class="flex flex-col min-h-screen overflow-x-hidden bg-white-default text-black-default">
     <NuxtLayout>
-        <NuxtPage/>
+      <NuxtPage/>
     </NuxtLayout>
   </div>
 </template>
