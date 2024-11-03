@@ -2,16 +2,16 @@
 useHead({
   title: "GuideIT",
   meta: [{
-    name: 'description',
+    name: 'GuideIT',
     content: "Die Entscheidungshilfe der HTL Rennweg"
   }]
 })
 </script>
 
 <template>
-  <div class="flex h-screen flex-col font-league-spartan bg-background-default text-text-default">
+  <div class="flex flex-col bg-white-default text-black-default">
     <NuxtLayout>
-      <NuxtPage />
+        <NuxtPage/>
     </NuxtLayout>
   </div>
 </template>

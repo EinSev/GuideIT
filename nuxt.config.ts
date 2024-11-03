@@ -28,13 +28,15 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ['@nuxt/icon', '@primevue/nuxt-module'],
+    modules: ['@nuxt/icon', '@primevue/nuxt-module', "nuxt-svgo"],
     primevue: {
         options: {
             theme: {
                 preset: Aura,
-
             }
         }
-    }
+    },
+    svgo: {
+        autoImportPath: './assets/svg/',
+    },
 })
