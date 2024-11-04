@@ -69,27 +69,27 @@ const items = ref<MenuItem>([
                    :pt="{ item: '!focus:bg-white !active:bg-white-default !bg-white-default', itemContent: '!focus:bg-white-default !active:bg-white-default !bg-white-default', submenu: '!focus:bg-white-default !active:bg-white-default !bg-white-default !group-hover:underline !border-medt-default !z-50', itemLabel: '!text-black-default group-hover:underline'}"/>
         </div>
         <div class="lg:hidden">
-          <Drawer v-model:visible="visible" position="right" class="!bg-white-default !text-black-default !w-56"
+          <Drawer v-model:visible="visible" position="right" class="!bg-white-default !text-black-default !w-56 !font-league-spartan"
                   :pt="{header: '!pl-0 !pb-0'}">
-            <template #closeicon><i class="pi pi-chevron-left !text-3xl !text-black-default"/></template>
+            <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default"/></template>
             <div>
-              <ul class="flex flex-col justify-end text-2xl text-end">
-                <li class="mb-2 text-primary-800">
+              <ul class="flex flex-col justify-end text-2xl text-end text-black-default">
+                <li class="mb-2">
                   <NuxtLink to="/">Home</NuxtLink>
                 </li>
-                <li class="mb-4 text-primary-800">
+                <li class="mb-2">
                   <NuxtLink to="/">Quiz</NuxtLink>
                 </li>
-                <li class="mb-4 text-nwt-default">
+                <li class="mb-2 text-nwt-default border-t-2 border-nwt-300 pt-2">
                   <NuxtLink to="/nwt">Netzwerktechnik</NuxtLink>
                 </li>
-                <li class="mb-2 text-medt-default">
+                <li class="mb-1 text-medt-default border-t-2 border-medt-300 pt-2 ">
                   <NuxtLink to="/medt">Medientechnik</NuxtLink>
                 </li>
-                <li class="mb-2 text-xl">
+                <li class="mb-1 text-xl text-nowrap whitespace-nowrap font-light">
                   <NuxtLink to="/medt/multi">Multimediale Produktion</NuxtLink>
                 </li>
-                <li class="text-xl">
+                <li class="text-xl font-light">
                   <NuxtLink to="/medt/webt">Webtechnologien</NuxtLink>
                 </li>
               </ul>
