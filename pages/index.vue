@@ -4,7 +4,7 @@ import type {MenuItem} from "primevue/menuitem";
 
 const visible = ref(false);
 
-const items = ref<MenuItem>([
+const items = ref<MenuItem[]>([
   {
     label: 'Home',
     class: 'group',
@@ -69,7 +69,8 @@ const items = ref<MenuItem>([
                    :pt="{ item: '!focus:bg-white !active:bg-white-default !bg-white-default', itemContent: '!focus:bg-white-default !active:bg-white-default !bg-white-default', submenu: '!focus:bg-white-default !active:bg-white-default !bg-white-default !group-hover:underline !border-medt-default !z-50', itemLabel: '!text-black-default group-hover:underline'}"/>
         </div>
         <div class="lg:hidden">
-          <Drawer v-model:visible="visible" position="right" class="!bg-white-default !text-black-default !w-56 !font-league-spartan"
+          <Drawer v-model:visible="visible" position="right"
+                  class="!bg-white-default !text-black-default !w-56 !font-league-spartan"
                   :pt="{header: '!pl-0 !pb-0'}">
             <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default"/></template>
             <div>
@@ -78,7 +79,7 @@ const items = ref<MenuItem>([
                   <NuxtLink to="/">Home</NuxtLink>
                 </li>
                 <li class="mb-2">
-                  <NuxtLink to="/">Quiz</NuxtLink>
+                  <NuxtLink to="/quiz">Quiz</NuxtLink>
                 </li>
                 <li class="mb-2 text-nwt-default border-t-2 border-nwt-300 pt-2">
                   <NuxtLink to="/nwt">Netzwerktechnik</NuxtLink>
@@ -95,7 +96,8 @@ const items = ref<MenuItem>([
               </ul>
             </div>
           </Drawer>
-          <button @click="visible = true"><span class="pi pi-bars !text-3xl"></span></button>
+          <button @click="visible = true" aria-label="Open menu" aria-expanded="visible"><span
+              class="pi pi-bars !text-3xl"></span></button>
         </div>
       </div>
       <div>
@@ -103,6 +105,18 @@ const items = ref<MenuItem>([
       </div>
       <div id="video" class="w-full px-[10vw] md:px-[14vw] lg:px-[20vw] xl:px-[30vw] mt-10 md:mt-14">
         <video class="w-full aspect-video bg-black-100" src=""></video>
+        <!--
+        <video
+            class="w-full aspect-video bg-black-100"
+            controls
+            preload="metadata"
+            poster="/path/to/poster.jpg"
+        >
+          <source src="/path/to/video.mp4" type="video/mp4">
+          <p>Your browser doesn't support HTML video. Here's a <a href="/path/to/video.mp4">link to the video</a>
+            instead.</p>
+        </video>
+        -->
       </div>
       <div
           class="flex flex-col sm:flex-row justify-center md:justify-between w-full mt-10 px-[10vw] md:px-[14vw] lg:px-[12vw] xl:px-[24vw] gap-x-5 lg:gap-x-0 gap-y-8">
@@ -131,7 +145,8 @@ const items = ref<MenuItem>([
           </div>
         </div>
       </div>
-      <div id="quiz" class="w-full px-[10vw] md:px-[14vw] lg:px-[12vw] xl:px-[24vw] mt-16 sm:mt-10 flex flex-col justify-center">
+      <div id="quiz"
+           class="w-full px-[10vw] md:px-[14vw] lg:px-[12vw] xl:px-[24vw] mt-16 sm:mt-10 flex flex-col justify-center">
         <div class="border-2 border-guideit-default bg-guideit-100 px-4 py-2 rounded-xl drop-shadow-xl">
           <h2 class="text-guideit-800 text-xl text-center">DAS QUIZ</h2>
           <p class="text-center">Finde jetzt heraus, welche Fachrichtung am besten zu dir passt!</p>
