@@ -19,3 +19,26 @@ useHead({
   </div>
 </template>
 
+<style>
+
+body {
+  @apply min-h-screen bg-white-default font-league-spartan;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fcfcfc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0b0b0;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+</style>
