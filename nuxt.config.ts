@@ -30,6 +30,10 @@ export default defineNuxtConfig({
 
     modules: ['@nuxt/icon', '@primevue/nuxt-module', "nuxt-svgo"],
     primevue: {
+        autoImport: false,
+        components: {
+            include: ['Drawer', 'Menubar']
+        },
         options: {
             theme: {
                 preset: Aura,

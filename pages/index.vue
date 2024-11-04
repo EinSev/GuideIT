@@ -63,13 +63,11 @@ const items = ref<MenuItem[]>([
   <div>
     <div class="flex flex-col justify-center items-center mt-5 relative">
       <div class="flex justify-end lg:justify-center w-full mr-5 md:mr-10 lg:mr-0">
-        <client-only>
           <div class="hidden lg:flex">
             <Menubar :model="items"
                      class="!rounded-3xl !bg-white-default !py-1 !px-2 !border-primary !drop-shadow !font-league-spartan !z-50"
                      :pt="{ item: '!focus:bg-white !active:bg-white-default !bg-white-default', itemContent: '!focus:bg-white-default !active:bg-white-default !bg-white-default', submenu: '!focus:bg-white-default !active:bg-white-default !bg-white-default !group-hover:underline !border-medt-default !z-50', itemLabel: '!text-black-default group-hover:underline'}"/>
           </div>
-        </client-only>
         <div class="lg:hidden">
           <Drawer v-model:visible="visible" position="right"
                   class="!bg-white-default !text-black-default !w-56 !font-league-spartan"
