@@ -22,7 +22,7 @@ useHead({
 <style>
 
 body {
-  @apply min-h-screen bg-white-default font-league-spartan;
+  @apply min-h-screen bg-white-default text-black-default font-league-spartan;
 }
 
 ::-webkit-scrollbar {
@@ -30,15 +30,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fcfcfc;
+  @apply bg-black-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b0b0b0;
-  border-radius: 1rem;
+  @apply bg-black-400 rounded-2xl;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #888888;
+  @apply bg-black-500;
 }
+
 </style>
