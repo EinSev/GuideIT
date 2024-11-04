@@ -4,7 +4,7 @@ import Aura from '@primevue/themes/aura';
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
-    css: ['~/assets/css/main.css', '~/assets/fonts/fonts.css'],
+    css: ['~/assets/css/main.css', '~/assets/fonts/fonts.css', 'primeicons/primeicons.css'],
     header: {
         charset: 'utf-8',
         viewport: 'width=device-width, initial-scale=1',
@@ -28,13 +28,19 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ['@nuxt/icon', '@primevue/nuxt-module'],
+    modules: ['@nuxt/icon', '@primevue/nuxt-module', "nuxt-svgo"],
     primevue: {
+        autoImport: false,
+        components: {
+            include: ['Drawer', 'Menubar']
+        },
         options: {
             theme: {
                 preset: Aura,
-
             }
         }
-    }
+    },
+    svgo: {
+        autoImportPath: '~/assets/svg/',
+    },
 })

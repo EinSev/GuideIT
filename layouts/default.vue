@@ -4,7 +4,7 @@ import {SpeedInsights} from '@vercel/speed-insights/vue';
 
 <template>
   <SpeedInsights/>
-  <div class="">
+  <div>
     <slot/>
   </div>
 </template>
