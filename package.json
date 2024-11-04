@@ -16,6 +16,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "nuxt": "^3.13.0",
     "nuxt-svgo": "^4.0.6",
+    "primeicons": "^7.0.0",
     "primevue": "^4.2.1",
     "tailwindcss-primeui": "^0.3.4",
     "vue": "latest",
