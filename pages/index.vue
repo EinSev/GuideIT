@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import {Menubar} from "primevue";
+import type {MenuItem} from "primevue/menuitem";
+
 const visible = ref(false);
 
-const items = ref([
+const items = ref<MenuItem>([
   {
     label: 'Home',
     class: 'group',
