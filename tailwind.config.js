@@ -40,7 +40,7 @@ export default {
                 '900': '#3d3d3d',
                 '950': '#292929',
             },
-            'primary': {
+            'guideit': {
                 '50': '#f3f8f8',
                 '100': '#dfedee',
                 '200': '#c4dcdd',

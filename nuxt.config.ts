@@ -37,6 +37,6 @@ export default defineNuxtConfig({
         }
     },
     svgo: {
-        autoImportPath: './assets/svg/',
+        autoImportPath: '~/assets/svg/',
     },
 })
