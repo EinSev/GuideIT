@@ -3,55 +3,57 @@
 </script>
 
 <template>
-  <div class="mt-5 mx-5 md:mx-48 leading-8">
-    <div class="flex justify-between lg:justify-center w-full mr-5 md:mr-10 lg:mr-0">
-      <SvgoLogo class="w-32" :fontControlled="false"/>
+  <div class="mt-5 mx-[5vw] sm:mx-[12vw] md:mx-[14vw] leading-8">
+    <div class="flex justify-between lg:justify-center w-full">
+      <NuxtLink to="/" class="lg:hidden">
+        <SvgoLogo class="w-32" :fontControlled="false"/>
+      </NuxtLink>
       <slot name="nav"/>
     </div>
-    <div class="mt-8">
-      <h1 class="text-heading-small md:text-heading font-semibold">
+    <div class="mt-8 lg:mt-12">
+      <h1 class="text-heading-small lg:text-heading font-semibold">
         <slot name="title"/>
       </h1>
     </div>
-    <div id="video" class="w-full px-[2vw] md:px-[14vw] lg:px-[20vw] xl:px-[20vw] mt-10">
+    <div id="video" class="w-full px-[2vw] md:px-[5vw] lg:px-[10vw] xl:px-[16vw] mt-10">
       <slot name="video"/>
     </div>
-    <div class="text-text md:text-text mt-8">
+    <div class="text-text mt-8">
       <p>
         <slot name="content-1"/>
       </p>
     </div>
     <div class="mt-8 mb-2">
-      <h2 class="text-sub-heading-small md:text-sub-heading font-medium">
+      <h2 class="text-sub-heading font-medium">
         <slot name="content-2-header"/>
       </h2>
     </div>
-    <div class="mt-2 text-text md:flex">
-      <p class="md:w-1/2">
+    <div class="mt-2 text-text lg:flex">
+      <p class="lg:w-1/2">
         <slot name="content-2"/>
       </p>
-      <div class="md:-mt-20 flex md:w-1/2 justify-center md:justify-end">
+      <div class="lg:-mt-20 flex lg:w-1/2 justify-center lg:justify-end">
         <slot name="content-2-illustration"/>
       </div>
     </div>
-    <div class="mt-5 md:mt-2 text-text flex flex-col md:flex-row">
-      <div class="md:-mt-14 order-2 md:order-1">
+    <div class="mt-5 lg:mt-2 text-text flex flex-col lg:flex-row">
+      <div class="xl:-mt-14 order-2 lg:order-1 flex justify-center">
         <slot name="content-3-illustration"/>
       </div>
-      <p class="md:ml-20 my-auto order-1 md:order-2">
+      <p class="lg:ml-20 my-auto order-1 lg:order-2">
         <slot name="content-3"/>
       </p>
     </div>
     <div class="mt-10 mb-2">
-      <h2 class="text-sub-heading-small md:text-sub-heading font-medium">
+      <h2 class="text-sub-heading font-medium">
         <slot name="content-4-header"/>
       </h2>
     </div>
-    <div class="mt-2 text-text flex flex-col md:flex-row">
+    <div class="mt-2 text-text flex flex-col lg:flex-row">
         <p>
           <slot name="content-4"/>
         </p>
-      <div class="md:-mt-24 flex justify-center md:block">
+      <div class="xl:-mt-24 flex justify-center lg:block">
         <slot name="content-4-illustration"/>
       </div>
     </div>

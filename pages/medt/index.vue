@@ -109,7 +109,7 @@ const items = ref<MenuItem[]>([
       <template #video>
         <div
             class="w-full aspect-video bg-medt-200 border-2 rounded border-medt-default flex items-center justify-center"><span
-            class="text-black-default text-text-small md:text-xl">Video ist noch nicht verfügbar!</span></div>
+            class="text-black-default text-lg md:text-xl">Video ist noch nicht verfügbar!</span></div>
         <!--
         <video
             class="w-full aspect-video bg-black-100"

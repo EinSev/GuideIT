@@ -104,7 +104,7 @@ const items = ref<MenuItem[]>([
         <SvgoLogoWithSlogan class="w-72 md:w-96 lg:w-80 xl:w-96 mt-5 md:mt-10 !-z-20" :fontControlled="false" filled/>
       </div>
       <div id="video" class="w-full px-[10vw] md:px-[14vw] lg:px-[20vw] xl:px-[30vw] mt-10 md:mt-10">
-        <div class="w-full aspect-video bg-black-100 rounded flex items-center justify-center"><span class="text-black-default text-xl">Video ist noch nicht verfügbar!</span></div>
+        <div class="w-full aspect-video bg-black-100 rounded flex items-center justify-center"><span class="text-black-default text-lg md:text-xl">Video ist noch nicht verfügbar!</span></div>
         <!--
         <video
             class="w-full aspect-video bg-black-100"
@@ -122,7 +122,7 @@ const items = ref<MenuItem[]>([
           class="flex flex-col sm:flex-row justify-center md:justify-between w-full mt-10 px-[10vw] md:px-[14vw] lg:px-[12vw] xl:px-[24vw] gap-x-5 gap-y-8">
         <div
             class="bg-nwt-200 border-2 border-nwt-default shadow-nwt-300 shadow-md py-4 px-4 rounded-xl w-full md:w-1/2 lg:w-1/3 xl:w-2/5 flex flex-col justify-center">
-          <h2 class="text-nwt-800 text-sub-heading text-center">NETZWERKTECHNIK</h2>
+          <h2 class="text-nwt-800 text-sub-heading text-center overflow-hidden overflow-ellipsis">NETZWERKTECHNIK</h2>
           <p class="text-text">In der Netzwerktechnik lernst du, wie du LANs, VLANs und WANs planst und
             konfigurierst...</p>
           <div class="flex justify-center mt-auto">
