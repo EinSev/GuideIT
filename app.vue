@@ -41,4 +41,11 @@ body {
   @apply bg-black-500;
 }
 
+::-moz-selection {
+  @apply bg-guideit-default;
+}
+
+::selection {
+  @apply bg-guideit-default;
+}
 </style>
