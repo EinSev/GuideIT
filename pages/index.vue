@@ -70,11 +70,11 @@ const items = ref<MenuItem[]>([
         </div>
         <div class="lg:hidden">
           <Drawer v-model:visible="visible" position="right"
-                  class="!bg-white-default !text-black-default !w-56 !font-league-spartan"
+                  class="!bg-white-default !text-black-default !w-72 !font-league-spartan"
                   :pt="{header: '!pl-0 !pb-0'}">
             <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default"/></template>
             <div>
-              <ul class="flex flex-col justify-end text-2xl text-end text-guideit-800">
+              <ul class="flex flex-col justify-end text-sub-heading-small text-end text-guideit-800">
                 <li class="mb-2">
                   <NuxtLink to="/">Home</NuxtLink>
                 </li>
@@ -87,11 +87,11 @@ const items = ref<MenuItem[]>([
                 <li class="mb-1 text-medt-default border-t-2 border-medt-300 pt-2 ">
                   <NuxtLink to="/medt">Medientechnik</NuxtLink>
                 </li>
-                <li class="mb-1 text-xl text-nowrap whitespace-nowrap font-light">
-                  <NuxtLink to="/medt/multi">Multimediale Produktion</NuxtLink>
+                <li class="mb-1 text-text whitespace-nowrap font-light text-wrap">
+                  <NuxtLink to="/medt/multi">Mediendesign und Medienproduktionen</NuxtLink>
                 </li>
-                <li class="text-xl font-light">
-                  <NuxtLink to="/medt/web">Webtechnologien</NuxtLink>
+                <li class="text-text font-light">
+                  <NuxtLink to="/medt/web">Web- und App-Entwicklung</NuxtLink>
                 </li>
               </ul>
             </div>

@@ -75,11 +75,11 @@ const items = ref<MenuItem[]>([
         </div>
         <div class="lg:hidden">
           <Drawer v-model:visible="visible" position="right"
-                  class="!bg-white-default !text-black-default !w-56 !font-league-spartan"
+                  class="!bg-white-default !text-black-default !w-72 !font-league-spartan"
                   :pt="{header: '!pl-0 !pb-0'}">
             <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default"/></template>
             <div>
-              <ul class="flex flex-col justify-end text-2xl text-end text-guideit-800">
+              <ul class="flex flex-col justify-end text-sub-heading-small text-end text-guideit-800">
                 <li class="mb-2">
                   <NuxtLink to="/">Home</NuxtLink>
                 </li>
@@ -92,11 +92,11 @@ const items = ref<MenuItem[]>([
                 <li class="mb-1 text-medt-default border-t-2 border-medt-300 pt-2 ">
                   <NuxtLink to="/medt">Medientechnik</NuxtLink>
                 </li>
-                <li class="mb-1 text-xl text-nowrap whitespace-nowrap font-light">
-                  <NuxtLink to="/medt/multi">Multimediale Produktion</NuxtLink>
+                <li class="mb-1 text-text whitespace-nowrap font-light text-wrap">
+                  <NuxtLink to="/medt/multi">Mediendesign und Medienproduktionen</NuxtLink>
                 </li>
-                <li class="text-xl font-light">
-                  <NuxtLink to="/medt/web">Webtechnologien</NuxtLink>
+                <li class="text-text font-light">
+                  <NuxtLink to="/medt/web">Web- und App-Entwicklung</NuxtLink>
                 </li>
               </ul>
             </div>
@@ -105,11 +105,11 @@ const items = ref<MenuItem[]>([
               class="pi pi-bars !text-3xl"></span></button>
         </div>
       </template>
-      <template #title><h1 class="text-medt-default text-heading font-semibold">Medientechnik</h1></template>
+      <template #title><span class="text-medt-default ">Medientechnik</span></template>
       <template #video>
         <div
             class="w-full aspect-video bg-medt-200 border-2 rounded border-medt-default flex items-center justify-center"><span
-            class="text-black-default text-xl">Video ist noch nicht verfügbar!</span></div>
+            class="text-black-default text-text-small md:text-xl">Video ist noch nicht verfügbar!</span></div>
         <!--
         <video
             class="w-full aspect-video bg-black-100"
@@ -129,13 +129,13 @@ const items = ref<MenuItem[]>([
         schon entscheiden musst. Zur Wahl stehen dafür
         <NuxtLink to="/medt/web" class="hover:underline text-medt-default font-medium">Web- & App-Entwicklung</NuxtLink>
         und
-        <NuxtLink to="/medt/multi" class="hover:underline text-medt-default font-medium">Mediendesign & Medienproduktionen
+        <NuxtLink to="/medt/multi" class="hover:underline text-medt-default font-medium">Mediendesign & Medienproduktionen.
         </NuxtLink>
-        . Im
+        Im
         Stamm- Unterricht erlernen alle die Grundlagen dieser Vertiefungen und zusätzlich etwas über das Gestalten und
         Programmieren von virtuellen Welten und über Grafik & Gestaltung.
       </template>
-      <template #content-2-header><h2 class="text-medt-default text-sub-heading font-medium">Themenbereiche</h2>
+      <template #content-2-header><span class="text-medt-default ">Themenbereiche</span>
       </template>
       <template #content-2>Im Themenbereich virtuelle Welten dreht sich alles um das 3D-Modellieren, animieren und die
         Einbindung der erstellten Modelle in Spielen, während in Grafik & Gestaltung auf das visuelle Aufbereiten von
@@ -156,7 +156,7 @@ const items = ref<MenuItem[]>([
         umfasst die Theorie zu
         Audio und Video/Foto und die Handhabung der dazugehörigen Hardware.
       </template>
-      <template #content-4-header><h2 class="text-medt-default text-sub-heading font-medium">Zusätzliche Fächer</h2>
+      <template #content-4-header><span class="text-medt-default">Zusätzliche Fächer</span>
       </template>
       <template #content-4>Allgemein hast du in der Abteilung Medientechnik auch weiterhin bereits bekannte
         Fächer wie INSY und SEW (Softwareentwicklung). SEW orientiert sich dann jedoch in Richtung Web und konzentriert
