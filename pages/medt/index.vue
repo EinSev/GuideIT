@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import type {MenuItem} from "primevue/menuitem";
 
-definePageMeta({
-      title: "Medientechnik",
-      description: "Medientechnik",
-    }
-)
+useHead({
+  title: "Medientechnik | GuideIT",
+  description: "Medientechnik",
+});
 
 const visible = ref(false);
 
@@ -65,7 +64,7 @@ const items = ref<MenuItem[]>([
 </script>
 
 <template>
-  <div>
+  <div class="bg-medt-50">
     <NuxtLayout name="department">
       <template #nav>
         <div class="hidden lg:flex">
@@ -123,17 +122,19 @@ const items = ref<MenuItem[]>([
         </video>
         -->
       </template>
-      <template #content-1>In der dritten Klasse kannst du dich für die Vertiefung Medientechnik für die 4.-5. Klasse
+      <template #content-1>In der dritten Klasse kannst du dich für die <b>Vertiefung Medientechnik</b> für die 4.-5.
+        Klasse
         entscheiden. In der Medientechnik hast du einerseits gemeinsamen Stamm-Unterricht, aber auch gleich eine
         spezielle Vertiefung in einem Bereich, der dich interessiert und für den du dich ebenfalls in der dritten Klasse
         schon entscheiden musst. Zur Wahl stehen dafür
-        <NuxtLink to="/medt/web" class="hover:underline text-medt-default font-medium">Web- & App-Entwicklung</NuxtLink>
+        <NuxtLink to="/medt/web" class="underline text-medt-default font-medium">Web- & App-Entwicklung</NuxtLink>
         und
-        <NuxtLink to="/medt/multi" class="hover:underline text-medt-default font-medium">Mediendesign & Medienproduktionen.
+        <NuxtLink to="/medt/multi" class="underline text-medt-default font-medium">Mediendesign &
+          Medienproduktionen.
         </NuxtLink>
-        Im
-        Stamm- Unterricht erlernen alle die Grundlagen dieser Vertiefungen und zusätzlich etwas über das Gestalten und
-        Programmieren von virtuellen Welten und über Grafik & Gestaltung.
+        Im Stamm- Unterricht erlernen alle die <b>Grundlagen dieser Vertiefungen</b> und zusätzlich etwas über <b>das
+          Gestalten
+        und Programmieren von virtuellen Welten</b> und über <b>Grafik & Gestaltung</b>.
       </template>
       <template #content-2-header><span class="text-medt-default ">Themenbereiche</span>
       </template>
@@ -148,10 +149,11 @@ const items = ref<MenuItem[]>([
         <SvgoMedtProgramming class="w-[22rem]" :fontControlled="false" filled/>
       </template>
       <template #content-3>In den Grundlagen von
-        <NuxtLink to="/medt/web" class="hover:underline text-medt-default font-medium">Web- & App-Entwicklung</NuxtLink>
+        <NuxtLink to="/medt/web" class="underline text-medt-default font-medium">Web- & App-Entwicklung</NuxtLink>
         erweiterst du dein Wissen in PHP, entwickelst Webseiten mit Template Engines wie Twig und machst deine ersten
         Schritte in Content Management Systemen wie Wordpress.
-        <NuxtLink to="/medt/multi" class="hover:underline text-medt-default font-medium">Mediendesign & Medienproduktionen
+        <NuxtLink to="/medt/multi" class="underline text-medt-default font-medium">Mediendesign &
+          Medienproduktionen
         </NuxtLink>
         umfasst die Theorie zu
         Audio und Video/Foto und die Handhabung der dazugehörigen Hardware.
@@ -159,8 +161,8 @@ const items = ref<MenuItem[]>([
       <template #content-4-header><span class="text-medt-default">Zusätzliche Fächer</span>
       </template>
       <template #content-4>Allgemein hast du in der Abteilung Medientechnik auch weiterhin bereits bekannte
-        Fächer wie INSY und SEW (Softwareentwicklung). SEW orientiert sich dann jedoch in Richtung Web und konzentriert
-        sich auf das Frontendframework Vue.js und Springboot für die Entwicklung eines Backends. In ITP
+        Fächer wie <b>INSY</b> (Informationssysteme) und <b>SEW</b> (Softwareentwicklung). SEW orientiert sich dann jedoch in Richtung Web und konzentriert
+          sich auf das Frontendframework Vue.js und Springboot für die Entwicklung eines Backends. In <b>ITP</b>
         (Informationstechnische Projekte) wendest du dein erlerntes Wissen dann in
         eigenen kleinen Projekten mit der Hilfe von Projektmanagementmethoden wie Wasserfall und Scrum an.
       </template>

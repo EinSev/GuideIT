@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     primevue: {
         autoImport: false,
         components: {
-            include: ['Drawer', 'Menubar']
+            include: ['Drawer', 'Menubar', 'ScrollTop']
         },
         options: {
             theme: {

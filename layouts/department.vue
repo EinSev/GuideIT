@@ -60,7 +60,7 @@
     <div id="quiz"
          class="w-full mt-11 sm:mt-10 flex flex-col justify-center">
       <div class="border-2 border-guideit-default bg-guideit-100 px-4 py-2 rounded-xl shadow-guideit-200 shadow-md">
-        <h2 class="text-guideit-800 text-sub-heading text-center">DAS QUIZ</h2>
+        <h2 class="text-guideit-800 text-sub-heading text-center mt-1.5 mb-2">DAS QUIZ</h2>
         <p class="text-center text-text">Finde jetzt heraus, welche Fachrichtung am besten zu dir passt!</p>
         <div class="flex justify-center mb-2">
           <button
@@ -78,6 +78,7 @@
               external><img src="/assets/img/htl3r_logo_slogan_transparent.png" alt="Logo der HTL Rennweg"/>
     </NuxtLink>
   </div>
+  <ScrollTop class="!bg-black-default"/>
 </template>
 
 <style scoped>
