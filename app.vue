@@ -16,6 +16,7 @@ useHead({
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
+    <ScrollTop :pt="{root: '!bg-black-default !text-white-default !border-black-default !px-2 !py-1'}"/>
   </div>
 </template>
 
@@ -47,5 +48,15 @@ body {
 
 ::selection {
   @apply bg-guideit-default;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 </style>

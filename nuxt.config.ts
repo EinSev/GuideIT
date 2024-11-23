@@ -20,14 +20,15 @@ export default defineNuxtConfig({
             {rel: "apple-mobile-web-app-title", content: "GuideIT"},
             {rel: "manifest", href: "/site.webmanifest"}]
     },
-
     postcss: {
         plugins: {
             tailwindcss: {},
             autoprefixer: {},
         },
     },
-
+    app: {
+        pageTransition: { name: 'page', mode: 'out-in' }
+    },
     modules: ['@nuxt/icon', '@primevue/nuxt-module', "nuxt-svgo"],
     primevue: {
         autoImport: false,
