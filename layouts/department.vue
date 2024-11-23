@@ -53,7 +53,7 @@
         <p>
           <slot name="content-4"/>
         </p>
-      <div class="xl:-mt-24 flex justify-center lg:block">
+      <div class="xl:-mt-20 flex justify-center lg:block">
         <slot name="content-4-illustration"/>
       </div>
     </div>

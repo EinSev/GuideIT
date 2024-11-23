@@ -3,7 +3,8 @@
 </script>
 
 <template>
-impressum
+  <div>impressum</div>
+
 </template>
 
 <style scoped>

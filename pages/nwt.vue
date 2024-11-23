@@ -3,7 +3,8 @@
 </script>
 
 <template>
-nwt
+  <div>nwt</div>
+
 </template>
 
 <style scoped>
