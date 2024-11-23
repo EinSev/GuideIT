@@ -78,7 +78,7 @@
               external><img src="/assets/img/htl3r_logo_slogan_transparent.png" alt="Logo der HTL Rennweg"/>
     </NuxtLink>
   </div>
-  <ScrollTop class="!bg-black-default"/>
+  <ScrollTop :pt="{root: '!bg-black-default !text-white-default !px-2 !py-1'}"/>
 </template>
 
 <style scoped>
