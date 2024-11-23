@@ -64,7 +64,7 @@ const items = ref<MenuItem[]>([
 </script>
 
 <template>
-  <div class="bg-medt-50">
+  <div>
     <NuxtLayout name="department">
       <template #nav>
         <div class="hidden lg:flex">
