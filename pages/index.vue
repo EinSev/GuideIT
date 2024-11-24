@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import {Menubar} from "primevue";
 import type {MenuItem} from "primevue/menuitem";
-
-const visible = ref(false);
+import NavDrawer from "~/components/NavDrawer.vue";
 
 const items = ref<MenuItem[]>([
   {
@@ -21,8 +19,8 @@ const items = ref<MenuItem[]>([
 
   },
   {
-    label: '',
-    class: 'border-l border-guideit-500 w-1 cursor-default hover:cursor-default py-2',
+    separator: true,
+    class: 'border-l border-guideit-500 w-1 py-3',
   },
   {
     label: 'Netzwerktechnik',
@@ -68,37 +66,7 @@ const items = ref<MenuItem[]>([
                    class="!rounded-3xl !bg-white-default !py-1 !px-2 !border-guideit-default !font-league-spartan !z-50 !shadow-guideit-200 !shadow-md"
                    :pt="{ item: '!focus:bg-white !active:bg-white-default !bg-none', itemContent: '!focus:bg-white-default !active:bg-white-default !bg-white-default', submenu: '!focus:bg-white-default !active:bg-white-default !bg-white-default !group-hover:underline !border-medt-default !z-50', itemLabel: '!text-black-default !text-lg group-hover:underline', itemLink: '!p-0 !py-1 !px-3'}"/>
         </div>
-        <div class="lg:hidden">
-          <Drawer v-model:visible="visible" position="right"
-                  class="!bg-white-default !text-black-default !w-72 !font-league-spartan"
-                  :pt="{header: '!pl-0 !pb-0'}">
-            <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default"/></template>
-            <div>
-              <ul class="flex flex-col justify-end text-sub-heading-small text-end text-guideit-800">
-                <li class="mb-2">
-                  <NuxtLink to="/">Home</NuxtLink>
-                </li>
-                <li class="mb-2">
-                  <NuxtLink to="/quiz">Quiz</NuxtLink>
-                </li>
-                <li class="mb-2 text-nwt-default border-t-2 border-nwt-300 pt-2">
-                  <NuxtLink to="/nwt">Netzwerktechnik</NuxtLink>
-                </li>
-                <li class="mb-1 text-medt-default border-t-2 border-medt-300 pt-2 ">
-                  <NuxtLink to="/medt">Medientechnik</NuxtLink>
-                </li>
-                <li class="mb-1 text-text whitespace-nowrap font-light text-wrap">
-                  <NuxtLink to="/medt/multi">Mediendesign und Medienproduktionen</NuxtLink>
-                </li>
-                <li class="text-text font-light">
-                  <NuxtLink to="/medt/web">Web- und App-Entwicklung</NuxtLink>
-                </li>
-              </ul>
-            </div>
-          </Drawer>
-          <button @click="visible = true" aria-label="Open menu" aria-expanded="visible"><span
-              class="pi pi-bars !text-3xl"></span></button>
-        </div>
+        <NavDrawer/>
       </div>
       <div>
         <SvgoLogoWithSlogan class="w-72 md:w-96 lg:w-80 xl:w-96 mt-5 md:mt-10 !-z-20" :fontControlled="false" filled/>
