@@ -29,7 +29,7 @@ const items = ref<MenuItem[]>([
     class: 'border-l border-medt-default w-1 cursor-default hover:cursor-default py-2',
   },
   {
-    label: 'Netwerktechnik',
+    label: 'Netzwerktechnik',
     class: 'group',
     command: () => {
       navigateTo('/nwt')
