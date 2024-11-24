@@ -3,7 +3,8 @@
 </script>
 
 <template>
-quiz
+  <div>quiz</div>
+
 </template>
 
 <style scoped>

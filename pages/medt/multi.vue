@@ -3,7 +3,8 @@
 </script>
 
 <template>
-multi
+  <div>multi</div>
+
 </template>
 
 <style scoped>

@@ -9,7 +9,17 @@ export default {
         "./error.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontSize: {
+                'heading': '3.75rem',
+                'sub-heading': '1.875rem',
+                'text': '1.25rem',
+                'heading-small': '3rem',
+                'sub-heading-small': '1.6rem',
+                'text-small': '1rem',
+            },
+
+        },
         fontFamily: {
             "league-spartan": "League Spartan"
         },

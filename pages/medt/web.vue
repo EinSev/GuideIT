@@ -3,7 +3,7 @@
 </script>
 
 <template>
-webt
+  <div>webt</div>
 </template>
 
 <style scoped>
