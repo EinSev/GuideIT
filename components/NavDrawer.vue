@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const visible = ref(false);
+const visible = ref<boolean>(false);
 </script>
 
 <template>
@@ -9,7 +9,8 @@ const visible = ref(false);
             :pt="{header: '!pl-0 !pb-0'}">
       <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default"/></template>
       <div>
-        <ul class="flex flex-col justify-end text-sub-heading-small text-end text-guideit-800">
+        <ul role="list" aria-label="Navigation"
+            class="flex flex-col justify-end text-sub-heading-small text-end text-guideit-800">
           <li class="mb-2">
             <NuxtLink to="/">Home</NuxtLink>
           </li>
@@ -22,7 +23,7 @@ const visible = ref(false);
           <li class="mb-1 text-medt-default border-t-2 border-medt-300 pt-2 ">
             <NuxtLink to="/medt">Medientechnik</NuxtLink>
           </li>
-          <li class="mb-1 text-text whitespace-nowrap font-light text-wrap">
+          <li class="mb-1 text-text font-light text-wrap">
             <NuxtLink to="/medt/multi">Mediendesign und Medienproduktionen</NuxtLink>
           </li>
           <li class="text-text font-light">
