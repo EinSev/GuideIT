@@ -74,7 +74,7 @@ const items = ref<MenuItem[]>([
         </div>
         <!-- TODO add drawer after mm page is merged -->
       </template>
-      <template #title><span class="text-medt-wt-default ">Web- und App-Entwicklung</span></template>
+      <template #title><span class="text-medt-wt-default leading-none">Web- und App-Entwicklung</span></template>
       <template #video>
         <div
             class="w-full aspect-video bg-medt-wt-200 border-2 rounded border-medt-wt-default flex items-center justify-center"><span
@@ -109,11 +109,10 @@ const items = ref<MenuItem[]>([
         dem MVC-Ansatz erstellen kannst.
       </template>
       <template #content-2-illustration>
-        <!-- TODO add programming SVG -->
-        <SvgoMedtStudio class="w-[28rem]" :fontControlled="false" filled/>
+        <SvgoMedtWebPairProgramming class="w-[30rem]" :fontControlled="false" filled/>
       </template>
       <template #content-3-illustration>
-        <SvgoMedtWebVr class="w-[22rem]" :fontControlled="false" filled/>
+        <SvgoMedtWebVr class="w-[20rem] lg:mt-16" :fontControlled="false" filled/>
       </template>
       <template #content-3> Keine Sorge, wenn du noch nicht weißt, was das ist, genau das wirst du ebenfalls in dieser
         Vertiefung erlernen. Ebenso erweiterst du dein Wissen von <b>Content-Management-Systemen</b> wie Wordpress und
