@@ -1,4 +1,6 @@
 <script setup>
+import {SpeedInsights} from '@vercel/speed-insights/vue';
+
 useHead({
   title: "GuideIT",
   htmlAttrs: {
@@ -13,6 +15,7 @@ useHead({
 
 <template>
   <div class="flex flex-col min-h-screen overflow-x-hidden bg-white-default text-black-default">
+    <SpeedInsights/>
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
