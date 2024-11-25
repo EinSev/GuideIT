@@ -6,7 +6,6 @@ useHead({
   description: "Web- und App-Entwicklung",
 });
 
-const visible = ref(false);
 
 const items = ref<MenuItem[]>([
   {
@@ -112,7 +111,7 @@ const items = ref<MenuItem[]>([
         <SvgoMedtWebPairProgramming class="w-[30rem]" :fontControlled="false" filled/>
       </template>
       <template #content-3-illustration>
-        <SvgoMedtWebVr class="w-[20rem] lg:mt-16" :fontControlled="false" filled/>
+        <SvgoMedtWebVr class="w-[14rem] lg:w-[18rem] lg:mt-16" :fontControlled="false" filled/>
       </template>
       <template #content-3> Keine Sorge, wenn du noch nicht weißt, was das ist, genau das wirst du ebenfalls in dieser
         Vertiefung erlernen. Ebenso erweiterst du dein Wissen von <b>Content-Management-Systemen</b> wie Wordpress und

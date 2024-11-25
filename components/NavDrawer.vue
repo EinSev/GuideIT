@@ -12,22 +12,22 @@ const visible = ref<boolean>(false);
         <ul role="list" aria-label="Navigation"
             class="flex flex-col justify-end text-sub-heading-small text-end text-guideit-800">
           <li class="mb-2">
-            <NuxtLink to="/">Home</NuxtLink>
+            <NuxtLink to="/" class="hover:underline">Home</NuxtLink>
           </li>
           <li class="mb-2">
-            <NuxtLink to="/quiz">Quiz</NuxtLink>
+            <NuxtLink to="/quiz" class="hover:underline">Quiz</NuxtLink>
           </li>
           <li class="mb-2 text-nwt-default border-t-2 border-nwt-300 pt-2">
-            <NuxtLink to="/nwt">Netzwerktechnik</NuxtLink>
+            <NuxtLink to="/nwt" class="hover:underline">Netzwerktechnik</NuxtLink>
           </li>
           <li class="mb-1 text-medt-default border-t-2 border-medt-300 pt-2 ">
-            <NuxtLink to="/medt">Medientechnik</NuxtLink>
+            <NuxtLink to="/medt" class="hover:underline">Medientechnik</NuxtLink>
           </li>
           <li class="mb-1 text-text font-light text-wrap">
-            <NuxtLink to="/medt/multi">Mediendesign & Medienproduktionen</NuxtLink>
+            <NuxtLink to="/medt/multi" class="hover:underline">Mediendesign & Medienproduktionen</NuxtLink>
           </li>
           <li class="text-text font-light">
-            <NuxtLink to="/medt/web">Web- & App-Entwicklung</NuxtLink>
+            <NuxtLink to="/medt/web" class="hover:underline">Web- & App-Entwicklung</NuxtLink>
           </li>
         </ul>
       </div>
