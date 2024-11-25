@@ -46,14 +46,14 @@ const items = ref<MenuItem[]>([
         }
       },
       {
-        label: 'Mediendesign und Medienproduktionen',
+        label: 'Mediendesign & Medienproduktionen',
         class: 'group',
         command: () => {
           navigateTo('/medt/multi')
         }
       },
       {
-        label: 'Web- und App-Entwicklung',
+        label: 'Web- & App-Entwicklung',
         class: 'group',
         command: () => {
           navigateTo('/medt/web')
@@ -72,7 +72,7 @@ const items = ref<MenuItem[]>([
                    class="!rounded-3xl !bg-white-default !py-1 !px-2 !border-medt-wt-default !font-league-spartan !z-50 !shadow-medt-wt-200 !shadow-md"
                    :pt="{ item: '!focus:bg-white !active:bg-white-default !bg-none', itemContent: '!focus:bg-white-default !active:bg-white-default !bg-white-default', submenu: '!focus:bg-white-default !active:bg-white-default !bg-white-default !group-hover:underline !border-medt-default !z-50', itemLabel: '!text-black-default !text-lg group-hover:underline', itemLink: '!p-0 !py-1 !px-3'}"/>
         </div>
-        <!-- TODO add drawer after mm page is merged -->
+        <NavDrawer/>
       </template>
       <template #title><span class="text-medt-wt-default leading-none">Web- und App-Entwicklung</span></template>
       <template #video>
