@@ -40,14 +40,14 @@ const items = ref<MenuItem[]>([
         }
       },
       {
-        label: 'Mediendesign und Medienproduktionen',
+        label: 'Mediendesign & Medienproduktionen',
         class: 'group',
         command: () => {
           navigateTo('/medt/multi')
         }
       },
       {
-        label: 'Web- und App-Entwicklung',
+        label: 'Web- & App-Entwicklung',
         class: 'group',
         command: () => {
           navigateTo('/medt/web')

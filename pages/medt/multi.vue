@@ -3,8 +3,8 @@ import type {MenuItem} from "primevue/menuitem";
 import NavDrawer from "~/components/NavDrawer.vue";
 
 useHead({
-  title: "Mediendesign und Medienproduktionen | GuideIT",
-  description: "Mediendesign und Medienproduktionen",
+  title: "Mediendesign & Medienproduktionen | GuideIT",
+  description: "Mediendesign & Medienproduktionen",
 });
 
 const items = ref<MenuItem[]>([
@@ -45,14 +45,14 @@ const items = ref<MenuItem[]>([
         }
       },
       {
-        label: 'Mediendesign und Medienproduktionen',
+        label: 'Mediendesign & Medienproduktionen',
         class: 'group',
         command: () => {
           navigateTo('/medt/multi')
         }
       },
       {
-        label: 'Web- und App-Entwicklung',
+        label: 'Web- & App-Entwicklung',
         class: 'group',
         command: () => {
           navigateTo('/medt/web')
@@ -74,10 +74,10 @@ const items = ref<MenuItem[]>([
         <NavDrawer/>
       </template>
       <template #title><span
-          class="text-medt-mm-default hyphens-auto leading-none">Mediendesign und Medienproduktionen</span></template>
+          class="text-medt-mm-default hyphens-auto leading-none">Mediendesign & Medienproduktionen</span></template>
       <template #video>
         <div
-            class="w-full aspect-video bg-medt-mm-200 border-2 rounded border-medt-mm-default flex items-center justify-center"><span
+            class="w-full aspect-video bg-medt-mm-100 border-2 rounded border-medt-mm-default flex items-center justify-center"><span
             class="text-black-default text-lg md:text-xl">Video ist noch nicht verfügbar!</span></div>
         <!--
         <video
@@ -95,8 +95,8 @@ const items = ref<MenuItem[]>([
       <template #content-1>Wenn du dich in der 3. Klasse für die Vertiefung
         <NuxtLink to="/medt" class="underline text-medt-default font-medium">Medientechnik</NuxtLink>
         ab der 4. Klasse entscheidest,
-        hast du ebenfalls eine weitere wichtige Wahl zu tätigen: Deine spezielle Vertiefung in Web- und App-Entwicklung
-        oder Mediendesign und Medienproduktionen. Solltest du dich für <b>Mediendesign und Medienproduktionen</b>
+        hast du ebenfalls eine weitere wichtige Wahl zu tätigen: Deine spezielle Vertiefung in Web- & App-Entwicklung
+        oder Mediendesign & Medienproduktionen. Solltest du dich für <b>Mediendesign & Medienproduktionen</b>
         interessieren, bist du hier genau richtig!
       </template>
       <template #content-2-header><span class="text-medt-mm-default ">Darum geht's!</span>
@@ -111,7 +111,7 @@ const items = ref<MenuItem[]>([
         <SvgoMedtMmSet class="w-[28rem]" :fontControlled="false" filled/>
       </template>
       <template #content-3-illustration>
-        <SvgoMedtMmIllustrate class="w-[22rem] mt-10" :fontControlled="false" filled/>
+        <SvgoMedtMmIllustrate class="w-[20rem] mt-10" :fontControlled="false" filled/>
       </template>
       <template #content-3>Auch die <b>Brandgestaltung und das Marketing von Multimedia-Produkten</b> fallen in diesen
         Bereich.
@@ -120,7 +120,7 @@ const items = ref<MenuItem[]>([
           Fotobearbeitungsprogramme</b>
         sind wichtig, um aus deinen Ideen finale Endprodukte zu erstellen.
       </template>
-      <template #content-4-header><span class="text-medt-mm-default">Mediendesign und Medienproduktionen in der Praxis erleben</span>
+      <template #content-4-header><span class="text-medt-mm-default">Mediendesign & Medienproduktionen in der Praxis erleben</span>
       </template>
       <template #content-4>Übungen aus dem Unterricht sind zum Beispiel die Gestaltung eines <b>Brandingbooks</b>, die
         <b>Aufnahme

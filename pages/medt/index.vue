@@ -46,14 +46,14 @@ const items = ref<MenuItem[]>([
         }
       },
       {
-        label: 'Mediendesign und Medienproduktionen',
+        label: 'Mediendesign & Medienproduktionen',
         class: 'group',
         command: () => {
           navigateTo('/medt/multi')
         }
       },
       {
-        label: 'Web- und App-Entwicklung',
+        label: 'Web- & App-Entwicklung',
         class: 'group',
         command: () => {
           navigateTo('/medt/web')
@@ -92,10 +92,10 @@ const items = ref<MenuItem[]>([
                   <NuxtLink to="/medt">Medientechnik</NuxtLink>
                 </li>
                 <li class="mb-1 text-text whitespace-nowrap font-light text-wrap">
-                  <NuxtLink to="/medt/multi">Mediendesign und Medienproduktionen</NuxtLink>
+                  <NuxtLink to="/medt/multi">Mediendesign & Medienproduktionen</NuxtLink>
                 </li>
                 <li class="text-text font-light">
-                  <NuxtLink to="/medt/web">Web- und App-Entwicklung</NuxtLink>
+                  <NuxtLink to="/medt/web">Web- & App-Entwicklung</NuxtLink>
                 </li>
               </ul>
             </div>
