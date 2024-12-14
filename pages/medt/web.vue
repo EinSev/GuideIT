@@ -108,7 +108,7 @@ const items = ref<MenuItem[]>([
         dem MVC-Ansatz erstellen kannst.
       </template>
       <template #content-2-illustration>
-        <SvgoMedtWebPairProgramming class="w-[30rem] mt-10" :fontControlled="false" filled/>
+        <SvgoMedtWebPairProgramming class="w-[30rem] mt-10 lg:mt-2" :fontControlled="false" filled/>
       </template>
       <template #content-3-illustration>
         <SvgoMedtWebVr class="w-[14rem] lg:w-[18rem] lg:mt-16" :fontControlled="false" filled/>
