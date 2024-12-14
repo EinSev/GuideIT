@@ -11,19 +11,19 @@
       <slot name="nav"/>
     </div>
     <div class="mt-8 lg:mt-12">
-      <h1 class="text-heading-small lg:text-heading font-semibold">
+      <h1 class="text-heading-small lg:text-heading lg:text-center font-semibold">
         <slot name="title"/>
       </h1>
     </div>
     <div id="video" class="w-full px-[2vw] md:px-[5vw] lg:px-[10vw] xl:px-[16vw] mt-10">
       <slot name="video"/>
     </div>
-    <div class="text-text mt-8">
+    <div class="text-text mt-10">
       <p>
         <slot name="content-1"/>
       </p>
     </div>
-    <div class="mt-8 mb-2">
+    <div class="mt-16 lg:mt-20 mb-2">
       <h2 class="text-sub-heading font-medium">
         <slot name="content-2-header"/>
       </h2>
@@ -36,15 +36,15 @@
         <slot name="content-2-illustration"/>
       </div>
     </div>
-    <div class="mt-5 lg:mt-2 text-text flex flex-col lg:flex-row">
-      <div class="xl:-mt-14 order-2 lg:order-1 flex justify-center">
+    <div class="mt-12 lg:mt-20 text-text flex flex-col lg:flex-row">
+      <div class="mt-10 xl:-mt-14 order-2 lg:order-1 flex justify-center">
         <slot name="content-3-illustration"/>
       </div>
       <p class="lg:ml-20 my-auto order-1 lg:order-2">
         <slot name="content-3"/>
       </p>
     </div>
-    <div class="mt-10 mb-2">
+    <div class="mt-16 lg:mt-24 mb-2">
       <h2 class="text-sub-heading font-medium">
         <slot name="content-4-header"/>
       </h2>
@@ -53,12 +53,12 @@
         <p>
           <slot name="content-4"/>
         </p>
-      <div class="xl:-mt-20 flex justify-center lg:block">
+      <div class="mt-10 xl:-mt-20 flex justify-center lg:block">
         <slot name="content-4-illustration"/>
       </div>
     </div>
     <div id="quiz"
-         class="w-full mt-11 sm:mt-10 flex flex-col justify-center">
+         class="w-full mt-12 sm:mt-20 flex flex-col justify-center">
       <div class="border-2 border-guideit-default bg-guideit-100 px-4 py-2 rounded-xl shadow-guideit-200 shadow-md">
         <h2 class="text-guideit-800 text-sub-heading text-center mt-1.5 mb-2">DAS QUIZ</h2>
         <p class="text-center text-text">Finde jetzt heraus, welche Fachrichtung am besten zu dir passt!</p>

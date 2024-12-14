@@ -108,7 +108,7 @@ const items = ref<MenuItem[]>([
         <b>audiovisuelle Gestaltung</b>.
       </template>
       <template #content-2-illustration>
-        <SvgoMedtMmSet class="w-[28rem]" :fontControlled="false" filled/>
+        <SvgoMedtMmSet class="w-[28rem] mt-10" :fontControlled="false" filled/>
       </template>
       <template #content-3-illustration>
         <SvgoMedtMmIllustrate class="w-[20rem] mt-10" :fontControlled="false" filled/>
