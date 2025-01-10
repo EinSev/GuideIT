@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "start": "nuxt dev --port 4000",
+    "start:host": "nuxt dev --port 4000 --host 0",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
