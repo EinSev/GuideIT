@@ -3,7 +3,7 @@ import type {MenuItem} from "primevue/menuitem";
 
 useHead({
   title: "Medientechnik | GuideIT",
-  description: "Medientechnik",
+  description: "Erfahre mehr über die Medientechnik-Vertiefung an der HTL Rennweg. Lerne über Web- und App-Entwicklung, Mediendesign & Medienproduktionen und mehr.",
 });
 
 const visible = ref(false);

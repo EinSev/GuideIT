@@ -3,7 +3,7 @@ import type {MenuItem} from "primevue/menuitem";
 
 useHead({
   title: "Netzwerktechnik | GuideIT",
-  description: "Netzwerktechnik",
+  description: "Erfahre mehr über die Netzwerktechnik-Ausbildung an der HTL Rennweg. Lerne über Routing, Switching, Cyber Security und mehr.",
 });
 
 const visible = ref(false);
@@ -100,7 +100,7 @@ const items = ref<MenuItem[]>([
               </ul>
             </div>
           </Drawer>
-          <button @click="visible = true" aria-label="Open menu" aria-expanded="visible"><span
+          <button @click="visible = true" aria-label="Open menu"><span
               class="pi pi-bars !text-3xl"></span></button>
         </div>
       </template>

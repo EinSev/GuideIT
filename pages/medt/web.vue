@@ -3,7 +3,7 @@ import type {MenuItem} from "primevue/menuitem";
 
 useHead({
   title: "Web- und App-Entwicklung | GuideIT",
-  description: "Web- und App-Entwicklung",
+  description: "Erfahre mehr über die Web- und App-Entwicklung-Ausbildung an der HTL Rennweg. Lerne über Symfony, PHP, CMS und mehr.",
 });
 
 

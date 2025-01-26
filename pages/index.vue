@@ -2,6 +2,11 @@
 import type {MenuItem} from "primevue/menuitem";
 import NavDrawer from "~/components/NavDrawer.vue";
 
+useHead({
+  title: "Entscheidungshilfe HTL Rennweg | GuideIT",
+  description: "Erfahre mehr über die IT-Abteilungen und Vertiefungen der HTL Rennweg. Finde heraus, welche Fachrichtung am besten zu dir passt.",
+});
+
 const items = ref<MenuItem[]>([
   {
     label: 'Home',

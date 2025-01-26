@@ -4,7 +4,7 @@ import NavDrawer from "~/components/NavDrawer.vue";
 
 useHead({
   title: "Mediendesign & Medienproduktionen | GuideIT",
-  description: "Mediendesign & Medienproduktionen",
+  description: "Erfahre mehr über die Mediendesign & Medienproduktion-Ausbildung an der HTL Rennweg. Lerne über Foto, Video, Gestaltung und mehr.",
 });
 
 const items = ref<MenuItem[]>([
