@@ -2,9 +2,23 @@
 import type {MenuItem} from "primevue/menuitem";
 import NavDrawer from "~/components/NavDrawer.vue";
 
-useHead({
-  title: "Entscheidungshilfe HTL Rennweg | GuideIT",
-  description: "Erfahre mehr über die IT-Abteilungen und Vertiefungen der HTL Rennweg. Finde heraus, welche Fachrichtung am besten zu dir passt.",
+const config = useRuntimeConfig()
+const title = ref("Entscheidungshilfe HTL Rennweg | GuideIT");
+const description = ref("Erfahre mehr über die IT-Abteilungen und Vertiefungen der HTL Rennweg. Finde heraus, welche Fachrichtung am besten zu dir passt.");
+//const videoId = ref("");
+
+useSeoMeta({
+  ogUrl: () => config.URL as string,
+  ogType: "website",
+  title,
+  ogTitle: title.value,
+  description,
+  ogDescription: description.value,
+  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoAlt: "Ein Video über die Web- und App-Entwicklung-Spezialisierung an der HTL Rennweg",
+  colorScheme: "only light",
+  twitterCard: "player",
 });
 
 const items = ref<MenuItem[]>([

@@ -46,4 +46,7 @@ export default defineNuxtConfig({
     svgo: {
         autoImportPath: '~/assets/svg/',
     },
+    runtimeConfig: {
+        URL: process.env.URL,
+    }
 });

@@ -1,9 +1,25 @@
 <script setup lang="ts">
 import type {MenuItem} from "primevue/menuitem";
 
-useHead({
-  title: "Web- und App-Entwicklung | GuideIT",
-  description: "Erfahre mehr über die Web- und App-Entwicklung-Ausbildung an der HTL Rennweg. Lerne über Symfony, PHP, CMS und mehr.",
+const config = useRuntimeConfig()
+const title = ref("Web- und App-Entwicklung | GuideIT");
+const description = ref("Erfahre mehr über die Web- und App-Entwicklung-Spezialisierung an der HTL Rennweg. Lerne über Symfony, Apps, CMS und mehr.");
+//const videoId = ref("");
+
+useSeoMeta({
+  ogUrl: () => config.URL + "/medt/web",
+  ogType: "website",
+  title,
+  ogTitle: title.value,
+  description,
+  ogDescription: description.value,
+  ogImageUrl: "/seo/web.png",
+  ogImageAlt: "Eine Illustration zweier Person, die an einem Computer arbeiten.",
+  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoAlt: "Ein Video über die Web- und App-Entwicklung-Spezialisierung an der HTL Rennweg",
+  colorScheme: "only light",
+  twitterCard: "player",
 });
 
 

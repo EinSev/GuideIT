@@ -1,9 +1,25 @@
 <script setup lang="ts">
 import type {MenuItem} from "primevue/menuitem";
 
-useHead({
-  title: "Netzwerktechnik | GuideIT",
-  description: "Erfahre mehr über die Netzwerktechnik-Ausbildung an der HTL Rennweg. Lerne über Routing, Switching, Cyber Security und mehr.",
+const config = useRuntimeConfig()
+const title = ref("Netzwerktechnik | GuideIT");
+const description = ref("Erfahre mehr über die Netzwerktechnik-Ausbildung an der HTL Rennweg. Lerne über Routing, Switching, Cyber Security und mehr.");
+//const videoId = ref("");
+
+useSeoMeta({
+  ogUrl: () => config.URL + "/nwt",
+  ogType: "website",
+  title,
+  ogTitle: title.value,
+  description,
+  ogDescription: description.value,
+  ogImageUrl: "/seo/nwt.png",
+  ogImageAlt: "Eine Illustration einer Person, die an einem Serverschrank arbeitet.",
+  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoAlt: "Ein Video über die Netzwerktechnik-Abteilung an der HTL Rennweg",
+  colorScheme: "only light",
+  twitterCard: "player",
 });
 
 const visible = ref(false);

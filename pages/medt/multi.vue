@@ -2,10 +2,27 @@
 import type {MenuItem} from "primevue/menuitem";
 import NavDrawer from "~/components/NavDrawer.vue";
 
-useHead({
-  title: "Mediendesign & Medienproduktionen | GuideIT",
-  description: "Erfahre mehr über die Mediendesign & Medienproduktion-Ausbildung an der HTL Rennweg. Lerne über Foto, Video, Gestaltung und mehr.",
+const config = useRuntimeConfig()
+const title = ref("Mediendesign & Medienproduktionen | GuideIT");
+const description = ref("Erfahre mehr über die Mediendesign & Medienproduktion-Spezialisierung an der HTL Rennweg. Lerne über Foto, Video, Gestaltung und mehr.");
+//const videoId = ref("");
+
+useSeoMeta({
+  ogUrl: () => config.URL + "/medt/multi",
+  ogType: "website",
+  title,
+  ogTitle: title.value,
+  description,
+  ogDescription: description.value,
+  ogImageUrl: "/seo/multi.png",
+  ogImageAlt: "Eine Illustration eines Videodrehes mit mehreren Personen.",
+  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoAlt: "Ein Video über die Mediendesign & Medienproduktionen-Spezialisierung an der HTL Rennweg",
+  colorScheme: "only light",
+  twitterCard: "player",
 });
+
 
 const items = ref<MenuItem[]>([
   {
