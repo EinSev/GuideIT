@@ -131,7 +131,3 @@ const items = ref<MenuItem[]>([
     </NuxtLayout>
   </div>
 </template>
-
-<style scoped>
-
-</style>

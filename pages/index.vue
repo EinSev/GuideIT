@@ -72,7 +72,7 @@ const items = ref<MenuItem[]>([
         <SvgoLogoWithSlogan class="w-72 md:w-96 lg:w-80 xl:w-96 mt-5 md:mt-10 !-z-20" :fontControlled="false" filled/>
       </div>
       <div id="video" class="w-full px-[10vw] md:px-[14vw] lg:px-[20vw] xl:px-[30vw] mt-10 md:mt-10">
-        <div class="w-full aspect-video bg-black-100 rounded flex items-center justify-center"><span class="text-black-default text-lg md:text-xl">Video ist noch nicht verfügbar!</span></div>
+        <div class="w-full aspect-video bg-black-100 rounded flex items-center justify-center"><span class="text-black-default text-lg md:text-xl">Video ist bald verfügbar</span></div>
         <!--
         <video
             class="w-full aspect-video bg-black-100"
