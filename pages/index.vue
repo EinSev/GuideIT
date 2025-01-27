@@ -2,6 +2,25 @@
 import type {MenuItem} from "primevue/menuitem";
 import NavDrawer from "~/components/NavDrawer.vue";
 
+const config = useRuntimeConfig()
+const title = ref("Entscheidungshilfe HTL Rennweg | GuideIT");
+const description = ref("Erfahre mehr über die IT-Abteilungen und Vertiefungen der HTL Rennweg. Finde heraus, welche Fachrichtung am besten zu dir passt.");
+//const videoId = ref("");
+
+useSeoMeta({
+  ogUrl: () => config.URL as string,
+  ogType: "website",
+  title,
+  ogTitle: title.value,
+  description,
+  ogDescription: description.value,
+  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoAlt: "Ein Video über die Web- und App-Entwicklung-Spezialisierung an der HTL Rennweg",
+  colorScheme: "only light",
+  twitterCard: "player",
+});
+
 const items = ref<MenuItem[]>([
   {
     label: 'Home',
@@ -72,7 +91,7 @@ const items = ref<MenuItem[]>([
         <SvgoLogoWithSlogan class="w-72 md:w-96 lg:w-80 xl:w-96 mt-5 md:mt-10 !-z-20" :fontControlled="false" filled/>
       </div>
       <div id="video" class="w-full px-[10vw] md:px-[14vw] lg:px-[20vw] xl:px-[30vw] mt-10 md:mt-10">
-        <div class="w-full aspect-video bg-black-100 rounded flex items-center justify-center"><span class="text-black-default text-lg md:text-xl">Video ist noch nicht verfügbar!</span></div>
+        <div class="w-full aspect-video bg-black-100 rounded flex items-center justify-center"><span class="text-black-default text-lg md:text-xl">Video ist bald verfügbar</span></div>
         <!--
         <video
             class="w-full aspect-video bg-black-100"

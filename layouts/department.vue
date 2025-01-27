@@ -28,6 +28,8 @@
         <slot name="content-2-header"/>
       </h2>
     </div>
+    <slot name="content-2-more-text"/>
+    <slot name="content-2-more-text-illustration"/>
     <div class="mt-2 text-text lg:flex">
       <p class="lg:w-1/2">
         <slot name="content-2"/>
@@ -50,9 +52,9 @@
       </h2>
     </div>
     <div class="mt-2 text-text flex flex-col lg:flex-row">
-        <p>
-          <slot name="content-4"/>
-        </p>
+      <p>
+        <slot name="content-4"/>
+      </p>
       <div class="mt-10 xl:-mt-20 flex justify-center lg:block">
         <slot name="content-4-illustration"/>
       </div>
@@ -79,7 +81,3 @@
     </NuxtLink>
   </div>
 </template>
-
-<style scoped>
-
-</style>

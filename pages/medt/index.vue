@@ -1,9 +1,25 @@
 <script setup lang="ts">
 import type {MenuItem} from "primevue/menuitem";
 
-useHead({
-  title: "Medientechnik | GuideIT",
-  description: "Medientechnik",
+const config = useRuntimeConfig()
+const title = ref("Medientechnik | GuideIT");
+const description = ref("Erfahre mehr über die Medientechnik-Vertiefung an der HTL Rennweg. Lerne über Web- und App-Entwicklung, Mediendesign & Medienproduktionen und mehr.");
+//const videoId = ref("");
+
+useSeoMeta({
+  ogUrl: () => config.URL + "/medt",
+  ogType: "website",
+  title,
+  ogTitle: title.value,
+  description,
+  ogDescription: description.value,
+  ogImageUrl: "/seo/medt.png",
+  ogImageAlt: "Eine Illustration einer Person, die an einem Computer arbeitet.",
+  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoAlt: "Ein Video über die Medientechnik-Vertiefung an der HTL Rennweg",
+  colorScheme: "only light",
+  twitterCard: "player",
 });
 
 const visible = ref(false);
@@ -172,7 +188,3 @@ const items = ref<MenuItem[]>([
     </NuxtLayout>
   </div>
 </template>
-
-<style scoped>
-
-</style>
