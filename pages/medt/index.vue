@@ -4,7 +4,7 @@ import type {MenuItem} from "primevue/menuitem";
 const config = useRuntimeConfig()
 const title = ref("Medientechnik | GuideIT");
 const description = ref("Erfahre mehr über die Medientechnik-Vertiefung an der HTL Rennweg. Lerne über Web- und App-Entwicklung, Mediendesign & Medienproduktionen und mehr.");
-const videoId = ref("dQw4w9WgXcQ");
+//const videoId = ref("");
 
 useSeoMeta({
   ogUrl: () => config.URL + "/medt",
@@ -15,9 +15,9 @@ useSeoMeta({
   ogDescription: description.value,
   ogImageUrl: "/seo/medt.png",
   ogImageAlt: "Eine Illustration einer Person, die an einem Computer arbeitet.",
-  ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
-  ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
-  ogVideoAlt: "Ein Video über die Medientechnik-Vertiefung an der HTL Rennweg",
+  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoAlt: "Ein Video über die Medientechnik-Vertiefung an der HTL Rennweg",
   colorScheme: "only light",
   twitterCard: "player",
 });

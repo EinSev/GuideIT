@@ -207,7 +207,7 @@ const items = ref<MenuItem[]>([
         Projektmanagementmethoden wie Wasserfall und Scrum an.
       </template>
       <template #content-4-illustration>
-        <SvgonwtTeam class="w-[28rem]" :fontControlled="false" filled/>
+        <SvgoNwtTeam class="w-[28rem]" :fontControlled="false" filled/>
       </template>
     </NuxtLayout>
   </div>
