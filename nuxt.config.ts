@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     primevue: {
         autoImport: false,
         components: {
-            include: ['Drawer', 'Menubar', 'ScrollTop']
+            include: ['Drawer', 'Menubar', 'ScrollTop', 'Stepper', 'StepList', 'StepPanels', "StepItem", "Step", "StepPanel"]
         },
         options: {
             theme: {
