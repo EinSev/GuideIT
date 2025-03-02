@@ -41,27 +41,27 @@
           "answers": [
             {
               "id": 1,
-              "answer": "Probiere das Technische aus – Netzwerke und Infrastruktur sind spannend!",
+              "answer": "Ich tüftle an Netzwerken, IT-Security Problemen und Home Automatisation",
               "value": "nwt"
             },
             {
               "id": 2,
-              "answer": "Folge deinen Interessen in der Backend-Programmierung",
+              "answer": "Ich programmiere gerne meine eigenen kleinen Skripte und Anwendungen",
               "value": "nwt-webt"
             },
             {
               "id": 3,
-              "answer": "Mische alles – ein Full-Stack-Entwickler zu werden, bringt viele spannende Möglichkeiten",
+              "answer": "Ich entwickle kleine Web- und App-Projekte",
               "value": "webt"
             },
             {
               "id": 4,
-              "answer": "Kombiniere Technik mit Design – moderne Webseiten und Apps brauchen eine gute User Experience.",
+              "answer": "Ich modelliere gerne kleine 3D-Objekte",
               "value": "webt-multi"
             },
             {
               "id": 5,
-              "answer": "Setze auf Kreativität – die Medienwelt braucht Leute mit neuen Ideen!",
+              "answer": "Ich drehe Videos, mache Fotos und bearbeite diese oder gestalte Poster",
               "value": "multi"
             }
           ]

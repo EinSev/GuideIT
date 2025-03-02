@@ -30,7 +30,7 @@ export default defineNuxtConfig({
             autoprefixer: {},
         },
     },
-    modules: ['@nuxt/icon', '@primevue/nuxt-module', "nuxt-svgo"],
+    modules: ['@nuxt/icon', '@primevue/nuxt-module', "nuxt-svgo", "@vueuse/nuxt"],
     primevue: {
         autoImport: false,
         components: {

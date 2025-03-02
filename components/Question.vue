@@ -17,10 +17,13 @@ function shuffleArray(array: Answer[]) {
 }
 
 const list = ref<Answer[]>([]);
-const dragging = ref<boolean>(false);
 
 onMounted(() => {
   //list.value = shuffleArray(props.answers);
+  list.value = props.question.answers;
+})
+
+watch(() => props.question, () => {
   list.value = props.question.answers;
 })
 
@@ -50,12 +53,12 @@ const headingClass = computed(() => {
       </transition-group>
     </VueDraggable>
     <div class="flex justify-between w-1/2 mt-2">
-      <button @click="$emit('back')"
+      <button @click="$emit('back', list)"
         class="bg-guideit-50 text-guideit-800 border-2 border-guideit-400 rounded-lg pl-1 pt-0.5 pr-2 mt-5 flex gap-x-2 items-center">
         <Icon name="material-symbols:arrow-back" size="20" />
         <span>Zurück</span>
       </button>
-      <button @click="$emit('next')"
+      <button @click="$emit('next', list)"
         class="bg-guideit-50 text-guideit-800 border-2 border-guideit-400 rounded-lg pr-1 pt-0.5 pl-2 mt-5 flex gap-x-2 items-center">
         <span>Weiter</span>
         <Icon name="material-symbols:arrow-forward" size="20" />

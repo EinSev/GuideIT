@@ -3,3 +3,7 @@ type Answer = {
     answer: string,
     value: string,
 }
+
+type StoredAnswers = {
+    [key: string]: Answer[],
+}
