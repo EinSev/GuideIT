@@ -1,12 +1,10 @@
-import { readFileSync } from "fs";
-import { join } from "path";
+import file from "../../../data/questions.json";
 
 export default defineEventHandler((event) => {
   const stepId = Number(event.context.params?.stepid);
   const questionId = Number(event.context.params?.questionid);
 
-  const filePath = join(process.cwd(), "server/data/questions.json");
-  const questionsData = JSON.parse(readFileSync(filePath, "utf-8"));
+  const questionsData = file;
 
   const steps = questionsData.steps.map((s: Step) => ({ id: s.id, title: s.title }));
   const totalSteps = questionsData.steps.length;
