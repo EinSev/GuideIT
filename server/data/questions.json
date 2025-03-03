@@ -6,37 +6,6 @@
       "questions": [
         {
           "id": 1,
-          "question": "Was würdest du einem*einer Freund*in raten, der*die in derselben Situation ist?",
-          "answers": [
-            {
-              "id": 1,
-              "answer": "Probiere das Technische aus – Netzwerke und Infrastruktur sind spannend!",
-              "value": "nwt"
-            },
-            {
-              "id": 2,
-              "answer": "Folge deinen Interessen in der Backend-Programmierung",
-              "value": "nwt-webt"
-            },
-            {
-              "id": 3,
-              "answer": "Mische alles – ein Full-Stack-Entwickler zu werden, bringt viele spannende Möglichkeiten",
-              "value": "webt"
-            },
-            {
-              "id": 4,
-              "answer": "Kombiniere Technik mit Design – moderne Webseiten und Apps brauchen eine gute User Experience.",
-              "value": "webt-multi"
-            },
-            {
-              "id": 5,
-              "answer": "Setze auf Kreativität – die Medienwelt braucht Leute mit neuen Ideen!",
-              "value": "multi"
-            }
-          ]
-        },
-        {
-          "id": 2,
           "question": "Was davon würdest du als dein Hobby ansehen?",
           "answers": [
             {
@@ -67,7 +36,7 @@
           ]
         },
         {
-          "id": 3,
+          "id": 2,
           "question": "Was motiviert dich am meisten?",
           "answers": [
             {
@@ -98,7 +67,7 @@
           ]
         },
         {
-          "id": 4,
+          "id": 3,
           "question": "Was würdest du als deine größte Stärke bezeichnen?",
           "answers": [
             {
@@ -503,7 +472,7 @@
             },
             {
               "id": 3,
-              "answer": "Ein Einführungskurs in ein neues Framework",
+              "answer": "Einen Einführungskurs in ein neues Framework",
               "value": "webt"
             },
             {
