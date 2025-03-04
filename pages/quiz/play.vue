@@ -78,8 +78,9 @@ async function loadPrevious(list: Answer[]) {
     currentQuestionId.value--;
   } else {
     if (currentStepId.value > 1) {
+      const totalQuestionsInPreviousStep = steps.value?.find((step) => step.id === currentStepId.value - 1)?.totalQuestions;
       currentStepId.value--;
-      currentQuestionId.value = totalQuestionsInCurrentStep.value ?? 0;
+      currentQuestionId.value = totalQuestionsInPreviousStep ?? 1;
     } else {
       router.push("/quiz");
     }

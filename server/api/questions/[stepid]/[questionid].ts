@@ -6,7 +6,7 @@ export default defineEventHandler((event) => {
 
   const questionsData = file;
 
-  const steps = questionsData.steps.map((s: Step) => ({ id: s.id, title: s.title }));
+  const steps = questionsData.steps.map((s: Step) => ({ id: s.id, title: s.title, totalQuestions: s.questions.length }));
   const totalSteps = questionsData.steps.length;
 
   const step = questionsData.steps.find((s: Step) => s.id === stepId);
