@@ -78,7 +78,7 @@ const items = ref<MenuItem[]>([
 
 <template>
   <div>
-    <div class="flex flex-col justify-center items-center mt-5 relative">
+    <div class="flex flex-col justify-center items-center mt-5">
       <div class="flex justify-end lg:justify-center w-full mr-5 md:mr-10 lg:mr-0">
         <div class="hidden lg:flex">
           <Menubar :model="items"
