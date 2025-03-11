@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type {MenuItem} from "primevue/menuitem";
-import NavDrawer from "~/components/NavDrawer.vue";
+import { useStorage } from '@vueuse/core';
 
 const config = useRuntimeConfig()
 const title = ref("Quiz | GuideIT");
@@ -72,6 +72,18 @@ const items = ref<MenuItem[]>([
       }]
   }
 ]);
+
+const storedAnswers = useStorage<Record<string, Answer[]>>("guideit-stored-answers", {});
+const currentStepId = useStorage("guideit-current-step-id", 1);
+const currentQuestionId = useStorage("guideit-current-question-id", 1);
+
+function reset() {
+  console.log('Resetting Quiz');
+  storedAnswers.value = {};
+  currentQuestionId.value = 1;
+  currentStepId.value = 1;
+  navigateTo("/quiz/play");
+}
 </script>
 
 <template>
@@ -87,7 +99,7 @@ const items = ref<MenuItem[]>([
           <NavDrawer />
         </div>
       </div>
-      <div id="content">
+      <div id="content relative">
         <h1 id="heading"
           class="mt-8 lg:mt-12 text-heading-small text-center lg:text-heading font-semibold text-guideit-default">
           Mach das Quiz!
@@ -104,9 +116,10 @@ const items = ref<MenuItem[]>([
               unterstützen - denn niemand außer du selbst kann diese Entscheidung treffen!
             </p>
             <div class="flex justify-center mt-16">
-              <button
-                class="pt-2.5 pb-1 bg-guideit-50 px-16 text-sub-heading rounded-lg border-2 border-guideit-400 hover:bg-guideit-default hover:border-guideit-400 hover:text-guideit-50 text-guideit-800">
-                <NuxtLink to="/quiz/play">Loslegen!</NuxtLink>
+              <button @click="reset"
+                class="pt-2.5 pb-1 bg-guideit-50 px-16 text-sub-heading rounded-lg border-2 border-guideit-400
+                hover:bg-guideit-default hover:border-guideit-400 hover:text-guideit-50 text-guideit-800">
+                Loslegen!
               </button>
             </div>
           </div>

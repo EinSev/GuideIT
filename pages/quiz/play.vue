@@ -1,7 +1,27 @@
 <script setup lang="ts">
 import { useStorage } from '@vueuse/core'
 
-const route = useRoute();
+const config = useRuntimeConfig()
+const title = ref("Quiz | GuideIT");
+const description = ref("Mache das Quiz und finde heraus, welche IT-Abteilung an der HTL Rennweg am besten zu dir passt.");
+
+useSeoMeta({
+  ogUrl: () => config.URL + "/quiz/play",
+  ogType: "website",
+  title,
+  ogTitle: title.value,
+  description,
+  ogDescription: description.value,
+  ogImageUrl: "/seo/quiz.png",
+  ogImageAlt: "Eine Illustration einer Person, die an einem Schreibtisch mit einem Laptop sitzt. Zusätzlich ist eine Grafik mit Quizfragen im Hintergrund",
+  colorScheme: "only light",
+  twitterCard: "summary",
+});
+
+definePageMeta({
+  middleware: 'restart-game',
+})
+
 const router = useRouter();
 
 const currentStepId = useStorage("guideit-current-step-id", 1);
@@ -31,13 +51,10 @@ const loadQuestion = async () => {
 
     if (question.value) {
       const key = `${currentStepId.value}-${currentQuestionId.value}`;
-      console.log("loadQuestion", key, storedAnswers.value[key]);      
       question.value.answers = storedAnswers.value[key] ?? question.value.answers;
     }
     
     error.value = undefined;
-    await nextTick();
-    updateSeparators();
   } catch (err: any) {
     error.value = err.message;
     data.value = undefined;
@@ -51,7 +68,6 @@ const loadQuestion = async () => {
 watchEffect(loadQuestion);
 
 function saveAnswers(newAnswers: Answer[]) {
-  console.log("saveAnswers", newAnswers);
   const key = `${currentStepId.value}-${currentQuestionId.value}`;
   storedAnswers.value[key] = newAnswers;
 }
@@ -89,37 +105,21 @@ async function loadPrevious(list: Answer[]) {
   setLocalStorage();
 }
 
-function setLocalStorage() {
+async function setLocalStorage() {
   useStorage("guideit-current-step-id", currentStepId.value);
   useStorage("guideit-current-question-id", currentQuestionId.value);
-}
-
-function updateSeparators() {
-  let isActive = false;
-  const steps = document.querySelectorAll('.p-step');
-  
- for (let index = 0; index < steps.length; index++) {
-    const step = steps[index];
-    
-    isActive = step.classList.contains('p-step-active');
-    if (isActive) {      
-      return;
-    }
-  
-    const numberCircle = step.querySelector('.p-step-number');
-    numberCircle?.classList.add('before-active');
-  
-    const seperator = step.querySelector('.p-stepper-separator');
-    seperator?.classList.add('before-active');
-  }
 }
 </script>
 
 <template>
-  <div>
-    <Stepper :value="currentStepId" linear class="font-league-spartan px-32">
+  <div class="flex flex-col">
+    <NuxtLink to="/">
+      <SvgoLogo class="w-28 ml-6 mt-6" :fontControlled="false" filled />
+    </NuxtLink>
+    <Stepper :value="currentStepId" linear class="font-league-spartan px-40">
       <StepList>
-        <Step v-for="step in steps" :key="step.id" :value="step.id" :id="'step-' + step.id">
+        <Step v-for="step in steps" :key="step.id" :value="step.id" :id="'step-' + step.id"
+          class="h-14 overflow-hidden">
           <div
             :class="{ 'hidden': currentStepId !== step.id, 'h-20 whitespace-break-spaces max-w-32 text-left text-black-default flex items-center mx-1 break-words active:text-black-default border-guideit-default': true}">
             {{ step.title }}
@@ -127,8 +127,8 @@ function updateSeparators() {
         </Step>
       </StepList>
       <StepPanels class="h-full">
-        <StepPanel v-for="step in steps" :key="step.id" v-slot="{ activateCallback }" :value="step.id">
-          <div class="flex flex-col h-48 bg-white-default text-black-default break">
+        <StepPanel v-for="step in steps" :key="step.id" :value="step.id">
+          <div class="flex flex-col h-48 bg-white-default text-black-default mt-5">
             <Question v-if="question" :question="question" @back="loadPrevious" @next="loadNext" />
           </div>
         </StepPanel>
@@ -150,11 +150,7 @@ function updateSeparators() {
   @apply bg-white-200;
 }
 
-.p-stepper-separator.before-active {
-  @apply !bg-guideit-default;
-}
-
-.p-step-number.before-active {
-  @apply !border-guideit-default;
+:root {
+  --p-stepper-separator-active-background: #82b4b8;
 }
 </style>
