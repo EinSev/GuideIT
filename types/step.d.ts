@@ -1,7 +1,7 @@
 type Step = {
     id: number,
     title: string,
-    questions: Question[]
+    questions: Question[],
 }
 
 type StepSummary = {

@@ -26,6 +26,10 @@ export default defineEventHandler((event) => {
       message: `Frage ${questionId} nicht gefunden`,
     });
   }
+  
+  if (!question.is_intermediate) {
+    question.answers = shuffleArray(question.answers);
+  }
 
 return {
     steps: {
@@ -40,3 +44,11 @@ return {
     question,
 };
 });
+
+function shuffleArray(array: Answer[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}

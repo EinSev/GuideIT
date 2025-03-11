@@ -44,6 +44,7 @@ export default defineNuxtConfig({
     components: {
       include: [
         "Drawer",
+        "Dialog",
         "Menubar",
         "ScrollTop",
         "Stepper",
@@ -52,6 +53,7 @@ export default defineNuxtConfig({
         "StepItem",
         "Step",
         "StepPanel",
+        "Slider",
       ],
     },
     options: {

@@ -74,12 +74,14 @@ const items = ref<MenuItem[]>([
 ]);
 
 const storedAnswers = useStorage<Record<string, Answer[]>>("guideit-stored-answers", {});
+const storedIntermediateAnswers = useStorage<Record<string, number>>("guideit-stored-intermediate-answers", {});
 const currentStepId = useStorage("guideit-current-step-id", 1);
 const currentQuestionId = useStorage("guideit-current-question-id", 1);
 
 function reset() {
   console.log('Resetting Quiz');
   storedAnswers.value = {};
+  storedIntermediateAnswers.value = {};
   currentQuestionId.value = 1;
   currentStepId.value = 1;
   navigateTo("/quiz/play");

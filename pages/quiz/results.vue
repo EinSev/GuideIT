@@ -5,7 +5,7 @@ import JSConfetti from "js-confetti";
 import { SvgoQuizResultsWebt } from '#components';
 
 definePageMeta({
-  middleware: 'is-quiz-played',
+  //middleware: 'is-quiz-played',
 })
 
 const config = useRuntimeConfig()
@@ -79,21 +79,27 @@ const items = ref<MenuItem[]>([
   }
 ]);
 
+const jsConfetti = ref();
+
 const storedAnswers = useStorage<Record<string, Answer[]>>("guideit-stored-answers", {});
+const storedIntermediateAnswers = useStorage<Record<string, number>>("guideit-stored-intermediate-answers", {});
 const currentStepId = useStorage("guideit-current-step-id", 1);
 const currentQuestionId = useStorage("guideit-current-question-id", 1);
 
-const jsConfetti = new JSConfetti();
-
 const result = ref(evaluateResults());
+const showPopup = ref(evalualteIntermediateQuestions().over50 >= 2);
 
-function getResult(index: number) {
+onMounted(() => {
+  jsConfetti.value = new JSConfetti();
+});
+
+function getResultByIndex(index: number) {
   let link = "";
   let text = "";
   let category = "";
   let color = "";
 
-  switch(result.value[index].category) {
+  switch (result.value[index].category) {
     case "nwt":
       link = "/nwt";
       text = "Netzwerktechnik";
@@ -114,11 +120,7 @@ function getResult(index: number) {
       break;
   }
 
-  if (index === 0) {
-    jsConfetti.addConfetti({confettiColors: [color]});
-  }
-
-  return { link, text, category };
+  return { link, text, category, color };
 }
 
 function evaluateResults() {
@@ -130,15 +132,11 @@ function evaluateResults() {
     answers.forEach((answer: Answer, index: number) => {
       const points = length - index;
       const categories = answer.value.split('-');
-
-    
-  const pointsPerCategory = points / categories.length;
-
+      const pointsPerCategory = points / categories.length;
       categories.forEach((category) => {
         scores[category] = (scores[category] || 0) + pointsPerCategory;
       });
     });
-    
   }
 
   const temp = Object.entries(scores)
@@ -147,23 +145,36 @@ function evaluateResults() {
 
   console.log('Secret Results: ', temp);
 
+  //jsConfetti.value.addConfetti({ confettiColors: [getResultByIndex(0).color] });
+
   return temp;
 }
 
-function reset() {
+function evalualteIntermediateQuestions() {
+  const intermediateScores = storedIntermediateAnswers.value;
+  const results = [];
+  let over50 = 0;
+
+  for (let key in intermediateScores) {
+    const score = intermediateScores[key];
+    results.push({ category: key, score });
+    if (score > 50) {
+      over50++;
+    }
+  }
+
+  console.log('Intermediate Results: ', results);
+
+  return { results, over50 };
+}
+
+async function reset() {
   console.log('Resetting Quiz');
   storedAnswers.value = {};
   currentQuestionId.value = 1;
   currentStepId.value = 1;
-  navigateTo("/quiz");
+  await navigateTo("/");
 }
-
-/*
-<div class="flex flex-col justify-center items-center mt-20">
-    
-    <button @click="reset">Reset</button>
-  </div>
-*/
 </script>
 
 <template>
@@ -187,25 +198,31 @@ function reset() {
         <div class="px-20 mt-8 text-xl leading-9 flex">
           <div class="w-2/3 leading-10">
             <p>Wir haben berechnet und berechnet und sind zu einem Ergebnis gekommen: <br> Anhand deiner Angaben würden
-              wir dir den Zweig <NuxtLink :to="getResult(0).link" class="font-bold hover:underline"
-                :class="getResult(0).category === 'nwt' ? 'text-nwt-default' : getResult(0).category === 'webt' ? 'text-medt-wt-default' : 'text-medt-mm-default'">
-                {{ getResult(0).text }}</NuxtLink> empfehlen. <br> Am
+              wir dir den Zweig
+              <NuxtLink :to="getResultByIndex(0).link" class="font-bold hover:underline"
+                :class="getResultByIndex(0).category === 'nwt' ? 'text-nwt-default' : getResultByIndex(0).category === 'webt' ? 'text-medt-wt-default' : 'text-medt-mm-default'">
+                {{ getResultByIndex(0).text }}</NuxtLink> empfehlen. <br> Am
               zweitbesten passt laut unseren Berechnungen der
-              Zweig <NuxtLink :to="getResult(1).link" class="font-bold hover:underline"
-                :class="getResult(1).category === 'nwt' ? 'text-nwt-default' : getResult(1).category === 'webt' ? 'text-medt-wt-default' : 'text-medt-mm-default'">
-                {{ getResult(1).text }}</NuxtLink> zu dir!</p>
+              Zweig <NuxtLink :to="getResultByIndex(1).link" class="font-bold hover:underline"
+                :class="getResultByIndex(1).category === 'nwt' ? 'text-nwt-default' : getResultByIndex(1).category === 'webt' ? 'text-medt-wt-default' : 'text-medt-mm-default'">
+                {{ getResultByIndex(1).text }}</NuxtLink> zu dir!
+            </p>
             <p class="mt-10">Informiere dich aber gerne nochmal über alle Zweige und erfahre mehr <br> duch unsere
               interaktive Videoreihe!</p>
-            <div class="flex mt-16">
+            <div class="flex mt-8">
               <button @click="reset" class="pt-2.5 pb-1 bg-guideit-50 px-5 text-lg rounded-lg border-2 border-guideit-400
                 hover:bg-guideit-default hover:border-guideit-400 hover:text-guideit-50 text-guideit-800">
                 Zur Startseite
-            </button>
+              </button>
             </div>
           </div>
-          <SvgoQuizResultsWebt v-if="getResult(0).category === 'webt'" class="w-[23rem]" :fontControlled="false" filled />
-          <SvgoQuizResultsMulti v-if="getResult(0).category === 'multi'" class="w-[23rem]" :fontControlled="false" filled />
-          <SvgoQuizResultsNwt v-if="getResult(0).category === 'nwt'" class="w-[23rem]" :fontControlled="false" filled />
+          
+          <SvgoQuizResultsWebt v-if="getResultByIndex(0).category === 'webt'" class="w-[23rem]" :fontControlled="false"
+            filled />
+          <SvgoQuizResultsMulti v-if="getResultByIndex(0).category === 'multi'" class="w-[23rem]"
+            :fontControlled="false" filled />
+          <SvgoQuizResultsNwt v-if="getResultByIndex(0).category === 'nwt'" class="w-[23rem]" :fontControlled="false"
+            filled />
         </div>
       </div>
       <div class="flex mt-auto text-black-300 justify-between px-2 items-end">
@@ -214,6 +231,33 @@ function reset() {
           external><img src="/assets/img/htl3r_logo_slogan_transparent.png" alt="Logo der HTL Rennweg" />
         </NuxtLink>
       </div>
+    </div>
+    <div id="dialogs">
+      <Dialog v-model:visible="showPopup" modal :block-scroll="true" :auto-z-index="true" :draggable="false"
+        close-on-escape :show-header="false" :show-footer="false"
+        class="z-50 flex flex-col !rounded-3xl font-nunito w-2/4 !border-4 !border-guideit-default" :pt="{
+          root: {
+            class: '!bg-black-50 !text-black-default',
+          },
+        }" @hide="showPopup = false">
+        <div class="mt-5 flex justify-end mr-5">
+          <button class="text-black-700 hover:text-black-default" @click="showPopup = false">
+            <Icon name="material-symbols:close-small-outline-rounded" size="40" />
+          </button>
+        </div>
+        <div class="px-20">
+          <h2 class="text-2xl text-guideit-default mb-2 font-semibold">Wichtiger Hinweis!</h2>
+          <p class="text-text font-league-spartan leading-10">
+            Wir haben bemerkt, dass du bei den Zwischenfragen oft in Richtung Ja tendiert hast. Wir wollen dich daher
+            noch
+            einmal daran erinnern, dass deine Wahl deine ganz eigene Entscheidung ist! Überlege wie wichtig dir die
+            Meinungen von anderen Personen ist und informiere dich bei Ungewissheit bei deinen Lehrkräften!
+          </p>
+          <div class="flex justify-end mt-4 mb-8">
+            <span class="text-text">- dein GuideIT-Team</span>
+          </div>
+        </div>
+      </Dialog>
     </div>
   </div>
 </template>

@@ -18,15 +18,12 @@ useSeoMeta({
   twitterCard: "summary",
 });
 
-definePageMeta({
-  middleware: 'restart-game',
-})
-
 const router = useRouter();
 
 const currentStepId = useStorage("guideit-current-step-id", 1);
 const currentQuestionId = useStorage("guideit-current-question-id", 1);
 const storedAnswers = useStorage<Record<string, Answer[]>>("guideit-stored-answers", {});
+const storedIntermediateAnswers = useStorage<Record<string, number>>("guideit-stored-intermediate-answers", {});
 
 const data = ref<Data | undefined>(undefined);
 const steps = ref<StepSummary[] | undefined>(undefined);
@@ -34,6 +31,7 @@ const stepTitle = ref<string | undefined>(undefined);
 const totalSteps = ref<number | undefined>(undefined);
 const totalQuestionsInCurrentStep = ref<number | undefined>(undefined);
 const question = ref<Question | undefined>(undefined);
+const score = ref<number>(50);
 const error = ref<string | undefined>(undefined);
 
 const loadQuestion = async () => {
@@ -51,13 +49,20 @@ const loadQuestion = async () => {
 
     if (question.value) {
       const key = `${currentStepId.value}-${currentQuestionId.value}`;
-      question.value.answers = storedAnswers.value[key] ?? question.value.answers;
+      if (question.value.is_intermediate) {
+        score.value = storedIntermediateAnswers.value[key] ?? 50;
+      } else {
+        question.value.answers = storedAnswers.value[key] ?? question.value.answers;
+
+      }
     }
     
     error.value = undefined;
   } catch (err: any) {
     error.value = err.message;
     data.value = undefined;
+    steps.value = undefined;
+    score.value = 50;
     stepTitle.value = undefined;
     totalSteps.value = undefined;
     totalQuestionsInCurrentStep.value = undefined;
@@ -72,8 +77,18 @@ function saveAnswers(newAnswers: Answer[]) {
   storedAnswers.value[key] = newAnswers;
 }
 
-function loadNext(list: Answer[]) {
-  saveAnswers(list);
+function saveScore(newScore: number) {
+  const key = `${currentStepId.value}-${currentQuestionId.value}`;
+  storedIntermediateAnswers.value[key] = newScore;
+}
+
+function loadNext(listOrScore: Answer[] | number, is_intermediate: boolean = false) {
+  if (is_intermediate) {
+    saveScore(listOrScore as number);
+  } else { 
+    saveAnswers(listOrScore as Answer[]);
+  }
+  
   if (currentQuestionId.value < (totalQuestionsInCurrentStep.value ?? 0)) {
     currentQuestionId.value++;
   } else {
@@ -85,11 +100,16 @@ function loadNext(list: Answer[]) {
     }
   }
 
-  setLocalStorage();
+  updateLocalStoreIds();
 }
 
-async function loadPrevious(list: Answer[]) {
-  saveAnswers(list);
+async function loadPrevious(listOrScore: Answer[] | number, is_intermediate: boolean = false) {
+  if (is_intermediate) {
+    saveScore(listOrScore as number);
+  } else {
+    saveAnswers(listOrScore as Answer[]);
+  }
+
   if (currentQuestionId.value > 1) {
     currentQuestionId.value--;
   } else {
@@ -102,10 +122,10 @@ async function loadPrevious(list: Answer[]) {
     }
   }
 
-  setLocalStorage();
+  updateLocalStoreIds();
 }
 
-async function setLocalStorage() {
+async function updateLocalStoreIds() {
   useStorage("guideit-current-step-id", currentStepId.value);
   useStorage("guideit-current-question-id", currentQuestionId.value);
 }
@@ -129,7 +149,10 @@ async function setLocalStorage() {
       <StepPanels class="h-full">
         <StepPanel v-for="step in steps" :key="step.id" :value="step.id">
           <div class="flex flex-col h-48 bg-white-default text-black-default mt-5">
-            <Question v-if="question" :question="question" @back="loadPrevious" @next="loadNext" />
+            <Question v-if="question && !question.is_intermediate" :question="question" @back="loadPrevious"
+              @next="loadNext" />
+            <IntermediateQuestion v-else-if="question" :question="question" :score="score" @back="loadPrevious"
+              @next="loadNext" />
           </div>
         </StepPanel>
       </StepPanels>

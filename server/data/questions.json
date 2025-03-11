@@ -96,6 +96,33 @@
               "value": "multi"
             }
           ]
+        },
+        {
+          "id": 4,
+          "is_intermediate": true,
+          "question": "Hat dein*e derzeitige*r KV Einfluss auf deine Entscheidung?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
+            }
+          ]
         }
       ]
     },
@@ -224,6 +251,33 @@
               "id": 5,
               "answer": "Photoshop, Illustrator oder Premiere Pro für kreatives Arbeiten",
               "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "is_intermediate": true,
+          "question": "Entscheidest du dich aufgrund der Wahl deiner Klassenkolleg*innen?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
             }
           ]
         }
@@ -356,6 +410,33 @@
               "value": "multi"
             }
           ]
+        },
+        {
+          "id": 5,
+          "is_intermediate": true,
+          "question": "Ist deine Entscheidung abhängig von den Lehrkräften, die du in der Zukunft haben wirst oder nicht mehr haben wirst?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
+            }
+          ]
         }
       ]
     },
@@ -484,6 +565,33 @@
               "id": 5,
               "answer": "Adobe's neuen Kurs zum Thema „Postproduction wie im Film“",
               "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "is_intermediate": true,
+          "question": "Haben deine Eltern Einfluss auf deine Wahl?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
             }
           ]
         }

@@ -8,18 +8,9 @@ const props = defineProps<{
 
 const emit = defineEmits(["next", "back"]);
 
-function shuffleArray(array: Answer[]) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
 const list = ref<Answer[]>([]);
 
 onMounted(() => {
-  //list.value = shuffleArray(props.answers);
   list.value = props.question.answers;
 })
 
@@ -44,7 +35,8 @@ const headingClass = computed(() => {
     <div class="w-1/2 flex mt-5">
       <div
         class="flex flex-col bg-guideit-100 px-5 text-2xl font-medium border-l-2 border-y-2 rounded-l-xl border-black-default">
-        <div v-for="(answer, index) in question.answers" class="py-2 h-[4.25rem] flex items-center">{{ index + 1 }}</div>
+        <div v-for="(answer, index) in question.answers" class="py-2 h-[4.25rem] flex items-center">{{ index + 1 }}
+        </div>
       </div>
       <VueDraggable v-model="list" class="border-2 rounded-r-xl font-normal border-black-default w-full"
         target=".sort-target">
@@ -61,12 +53,12 @@ const headingClass = computed(() => {
     </div>
     <div class="flex justify-between w-1/2 mt-8">
       <button @click="$emit('back', list)"
-        class="bg-guideit-50 hover:bg-guideit-200 text-guideit-800 border-2 border-guideit-400 rounded-lg pl-1 pr-2 py-1.5 flex gap-x-2 items-center">
+        class="bg-guideit-50 hover:bg-guideit-200 text-guideit-800 border-2 border-guideit-400 rounded-lg pl-1 pr-2 py-1.5 flex gap-x-2 items-center select-none">
         <Icon name="material-symbols:arrow-back" size="20" />
         <span>Zurück</span>
       </button>
       <button @click="$emit('next', list)"
-        class="text-guideit-100 border-2 border-guideit-100 bg-guideit-800 hover:bg-guideit-950 rounded-lg pr-1 pl-2 py-1.5 flex gap-x-2 items-center">
+        class="text-guideit-100 border-2 border-guideit-100 bg-guideit-800 hover:bg-guideit-950 rounded-lg pr-1 pl-2 py-1.5 flex gap-x-2 items-center select-none">
         <span>Weiter</span>
         <Icon name="material-symbols:arrow-forward" size="20" />
       </button>
