@@ -170,6 +170,7 @@ function evaluateIntermediateQuestions() {
 
 async function reset() {
   storedAnswers.value = {};
+  storedIntermediateAnswers.value = {};
   currentQuestionId.value = 1;
   currentStepId.value = 1;
   await navigateTo("/");

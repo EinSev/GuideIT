@@ -112,6 +112,7 @@ async function loadPrevious(listOrScore: Answer[] | number, is_intermediate: boo
 
   if(currentQuestionId.value === 1 && currentStepId.value === 1) {
     router.push("/quiz");
+    return;
   }
 
   if (currentQuestionId.value === 1) {
