@@ -11,18 +11,18 @@ const score = ref(50);
 
 watch(() => props.score, (value) => {
   score.value = value;
-})
+});
 
 const headingClass = computed(() => {
   const length = props.question.question.length;
-  if (length < 20) return "text-6xl";
-  if (length < 50) return "text-5xl";
-  return "text-4xl";
+  if (length < 20) return "text-3xl lg:text-6xl";
+  if (length < 50) return "text-2xl lg:text-5xl";
+  return "text-xl lg:text-4xl";
 });
 
 function isActive(id: number) {
-  switch(id) {
-    case 1:      
+  switch (id) {
+    case 1:
       return score.value >= 0 && score.value < 16.5;
     case 2:
       return score.value >= 16.5 && score.value < 49.5 && score.value !== 50;
@@ -41,24 +41,22 @@ function isActive(id: number) {
     <div class="h-20">
       <h1 class="text-center font-semibold" :class="headingClass">{{ question.question }}</h1>
     </div>
-    <div class="w-full flex flex-col mt-10">
-      <div class="flex justify-between text-text">
+    <div class="w-full flex flex-col mt-20 lg:mt-10">
+      <div class="flex justify-between text-text-small lg:text-text">
         <span v-for="answer in question.answers"
           :class="isActive(answer.id) ? 'text-black-default font-semibold' : 'text-black-400 font-normal'">{{
-          answer.answer }}</span>
+            answer.answer }}</span>
       </div>
       <Slider v-model="score" class="w-full py-1 rounded-md" />
     </div>
-    <div class="flex justify-between w-1/2 mt-20">
+    <div class="flex justify-between w-full lg:w-1/2 mt-52 lg:mt-20">
       <button @click="$emit('back', score, true)"
-        class="bg-guideit-50 hover:bg-guideit-200 disabled:hover:bg-guideit-50 disabled:cursor-not-allowed text-guideit-800 border-2 border-guideit-400 rounded-lg pl-1 pr-2 py-1.5 flex gap-x-2 items-center select-none"
-        :disabled="score === 50">
+        class="bg-guideit-50 hover:bg-guideit-200 text-guideit-800 border-2 border-guideit-400 rounded-lg pl-1 pr-2 py-1 lg:py-1.5 flex gap-x-2 items-center select-none">
         <Icon name="material-symbols:arrow-back" size="20" />
         <span>Zurück</span>
       </button>
-      <button @click="$emit('next', score, true)"
-        class="text-guideit-100 border-2 border-guideit-100 bg-guideit-800 hover:bg-guideit-950 disabled:hover:bg-guideit-800 disabled:cursor-not-allowed rounded-lg pr-1 pl-2 py-1.5 flex gap-x-2 items-center select-none"
-        :disabled="score === 50">
+      <button @click="$emit('next', score, true)" :disabled="score === 50"
+        class="text-guideit-100 border-2 border-guideit-100 bg-guideit-800 hover:bg-guideit-950 rounded-lg pr-1 pl-2 py-1 lg:py-1.5 flex gap-x-2 items-center select-none">
         <span>Weiter</span>
         <Icon name="material-symbols:arrow-forward" size="20" />
       </button>
@@ -67,7 +65,6 @@ function isActive(id: number) {
 </template>
 
 <style>
-
 .p-slider-range {
   @apply bg-guideit-default rounded-md;
 }

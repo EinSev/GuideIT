@@ -136,19 +136,20 @@ async function updateLocalStoreIds() {
     <NuxtLink to="/">
       <SvgoLogo class="w-28 ml-6 mt-6" :fontControlled="false" filled />
     </NuxtLink>
-    <Stepper :value="currentStepId" linear class="font-league-spartan px-40">
+    <Stepper :value="currentStepId" linear class="font-league-spartan px-5 lg:px-40">
       <StepList>
-        <Step v-for="step in steps" :key="step.id" :value="step.id" :id="'step-' + step.id"
-          class="h-14 overflow-hidden">
-          <div
-            :class="{ 'hidden': currentStepId !== step.id, 'h-20 whitespace-break-spaces max-w-32 text-left text-black-default flex items-center mx-1 break-words active:text-black-default border-guideit-default': true}">
+        <Step v-for="step in steps" :key="step.id" :value="step.id" :id="'step-' + step.id" class="h-14 overflow-hidden"
+          :pt="{title: 'max-lg:hidden'}">
+          <div :class="{ 'hidden': currentStepId !== step.id}"
+            class="h-20 font-league-spartan whitespace-break-spaces max-w-32 text-left text-black-default flex items-center mx-1 break-words active:text-black-default border-guideit-default">
             {{ step.title }}
           </div>
         </Step>
       </StepList>
-      <StepPanels class="h-full">
-        <StepPanel v-for="step in steps" :key="step.id" :value="step.id">
-          <div class="flex flex-col h-48 bg-white-default text-black-default mt-5">
+      <StepPanels class="h-full" :pt="{root: 'p-0'}">
+        <StepPanel v-for="step in steps" :key="step.id" :value="step.id" class="h-full">
+          <div class="flex flex-col h-48 bg-white-default text-black-default lg:mt-5">
+            <span v-if="question && !question.is_intermediate" class="text-center mb-0.5 text-xs">{{ stepTitle }}</span>
             <Question v-if="question && !question.is_intermediate" :question="question" @back="loadPrevious"
               @next="loadNext" />
             <IntermediateQuestion v-else-if="question" :question="question" :score="score" @back="loadPrevious"
