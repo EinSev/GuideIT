@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useStorage } from '@vueuse/core';
 import type { MenuItem } from "primevue/menuitem";
-import JSConfetti from "js-confetti";
 import { SvgoQuizResultsWebt } from '#components';
 
 definePageMeta({
@@ -79,8 +78,6 @@ const items = ref<MenuItem[]>([
   }
 ]);
 
-const jsConfetti = ref();
-
 const storedAnswers = useStorage<Record<string, Answer[]>>("guideit-stored-answers", {});
 const storedIntermediateAnswers = useStorage<Record<string, number>>("guideit-stored-intermediate-answers", {});
 const currentStepId = useStorage("guideit-current-step-id", 1);
@@ -88,10 +85,6 @@ const currentQuestionId = useStorage("guideit-current-question-id", 1);
 
 const result = ref(evaluateResults());
 const showPopup = ref(evaluateIntermediateQuestions().over50 >= 2);
-
-onMounted(() => {
-  jsConfetti.value = new JSConfetti();
-});
 
 function getResultByIndex(index: number) {
   let link = "";
@@ -144,8 +137,6 @@ function evaluateResults() {
     .map(([category, score]) => ({ category, score }));
 
   console.log('Secret Results: ', temp);
-
-  jsConfetti.value.addConfetti({ confettiColors: [getResultByIndex(0).color] });
 
   return temp;
 }
