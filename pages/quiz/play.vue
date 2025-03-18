@@ -149,7 +149,7 @@ async function updateLocalStoreIds() {
       <StepPanels class="h-full" :pt="{root: 'p-0'}">
         <StepPanel v-for="step in steps" :key="step.id" :value="step.id" class="h-full">
           <div class="flex flex-col h-48 bg-white-default text-black-default lg:mt-5">
-            <span v-if="question && !question.is_intermediate" class="text-center mb-0.5 text-xs">{{ stepTitle }}</span>
+            <span v-if="question && !question.is_intermediate" class="text-center mb-0.5 text-xs md:text-sm lg:hidden">{{ stepTitle }}</span>
             <Question v-if="question && !question.is_intermediate" :question="question" @back="loadPrevious"
               @next="loadNext" />
             <IntermediateQuestion v-else-if="question" :question="question" :score="score" @back="loadPrevious"

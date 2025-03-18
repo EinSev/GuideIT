@@ -89,7 +89,7 @@ function reset() {
 </script>
 
 <template>
-  <div class="flex flex-col h-screen mx-[5vw] sm:mx-[12vw] md:mx-0">
+  <div class="flex flex-col h-screen mx-[5vw] sm:mx-[12vw] md:mx-[14vw] lg:mx-0">
     <div id="nav" class="flex justify-between lg:justify-center w-full mt-5">
       <NuxtLink to="/" class="lg:hidden">
         <SvgoLogo class="w-32" :fontControlled="false" />
