@@ -25,7 +25,7 @@ function isActive(id: number) {
     case 1:
       return score.value >= 0 && score.value < 16.5;
     case 2:
-      return score.value >= 16.5 && score.value < 49.5 && score.value !== 50;
+      return score.value >= 16.5 && score.value < 49.5;
     case 3:
       return score.value >= 49.5 && score.value < 82.5 && score.value !== 50;
     case 4:

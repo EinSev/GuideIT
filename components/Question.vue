@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {VueDraggable} from "vue-draggable-plus";
-import {ref, onMounted} from "vue";
 
 const props = defineProps<{
   question: Question;
@@ -42,7 +41,7 @@ const headingClass = computed(() => {
         target=".sort-target">
         <transition-group type="transition" tag="ul" name="fade" class="sort-target divide-y-2">
           <li v-for="item in list" :key="item.id"
-            class="flex flex-row items-center justify-between gap-x-5 text-sm lg:text-lg py-2 px-3 cursor-grab h-[4.25rem]">
+            class="flex flex-row items-center justify-between gap-x-5 text-sm lg:text-lg py-2 px-3 cursor-grab h-[4.25rem] select-none">
             <span>{{ item.answer }}</span>
             <div class="flex items-center">
               <Icon name="material-symbols:drag-indicator" size="25" />

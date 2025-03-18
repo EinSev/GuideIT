@@ -110,24 +110,24 @@ async function loadPrevious(listOrScore: Answer[] | number, is_intermediate: boo
     saveAnswers(listOrScore as Answer[]);
   }
 
-  if (currentQuestionId.value > 1) {
-    currentQuestionId.value--;
+  if(currentQuestionId.value === 1 && currentStepId.value === 1) {
+    router.push("/quiz");
+  }
+
+  if (currentQuestionId.value === 1) {
+    const totalQuestionsInPreviousStep = steps.value?.find((step) => step.id === currentStepId.value - 1)?.totalQuestions;
+    currentStepId.value--;
+    currentQuestionId.value = totalQuestionsInPreviousStep ?? 1;
   } else {
-    if (currentStepId.value > 1) {
-      const totalQuestionsInPreviousStep = steps.value?.find((step) => step.id === currentStepId.value - 1)?.totalQuestions;
-      currentStepId.value--;
-      currentQuestionId.value = totalQuestionsInPreviousStep ?? 1;
-    } else {
-      router.push("/quiz");
-    }
+    currentQuestionId.value--;
   }
 
   updateLocalStoreIds();
 }
 
 async function updateLocalStoreIds() {
-  useStorage("guideit-current-step-id", currentStepId.value);
-  useStorage("guideit-current-question-id", currentQuestionId.value);
+  currentStepId.value = currentStepId.value;
+  currentQuestionId.value = currentQuestionId.value;
 }
 </script>
 

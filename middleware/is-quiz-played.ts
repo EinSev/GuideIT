@@ -8,8 +8,8 @@ export default defineNuxtRouteMiddleware(() => {
     );
 
     if (Object.keys(storedAnswers.value).length === 0) {
-      console.log("Quiz not played yet");
       return navigateTo("/quiz");
     }
   }
+  return;
 });

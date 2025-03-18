@@ -79,7 +79,6 @@ const currentStepId = useStorage("guideit-current-step-id", 1);
 const currentQuestionId = useStorage("guideit-current-question-id", 1);
 
 function reset() {
-  console.log('Resetting Quiz');
   storedAnswers.value = {};
   storedIntermediateAnswers.value = {};
   currentQuestionId.value = 1;
@@ -103,7 +102,7 @@ function reset() {
         <NavDrawer />
       </div>
     </div>
-    <div id="content relative">
+    <div id="content">
       <h1 id="heading"
         class="mt-5 lg:mt-12 text-heading-small text-center lg:text-heading font-semibold text-guideit-default">
         Mach das Quiz!

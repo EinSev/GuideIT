@@ -5,7 +5,7 @@ import JSConfetti from "js-confetti";
 import { SvgoQuizResultsWebt } from '#components';
 
 definePageMeta({
-  //middleware: 'is-quiz-played',
+  middleware: 'is-quiz-played',
 })
 
 const config = useRuntimeConfig()
@@ -87,7 +87,7 @@ const currentStepId = useStorage("guideit-current-step-id", 1);
 const currentQuestionId = useStorage("guideit-current-question-id", 1);
 
 const result = ref(evaluateResults());
-const showPopup = ref(evalualteIntermediateQuestions().over50 >= 2);
+const showPopup = ref(evaluateIntermediateQuestions().over50 >= 2);
 
 onMounted(() => {
   jsConfetti.value = new JSConfetti();
@@ -145,12 +145,12 @@ function evaluateResults() {
 
   console.log('Secret Results: ', temp);
 
-  //jsConfetti.value.addConfetti({ confettiColors: [getResultByIndex(0).color] });
+  jsConfetti.value.addConfetti({ confettiColors: [getResultByIndex(0).color] });
 
   return temp;
 }
 
-function evalualteIntermediateQuestions() {
+function evaluateIntermediateQuestions() {
   const intermediateScores = storedIntermediateAnswers.value;
   const results = [];
   let over50 = 0;
@@ -169,7 +169,6 @@ function evalualteIntermediateQuestions() {
 }
 
 async function reset() {
-  console.log('Resetting Quiz');
   storedAnswers.value = {};
   currentQuestionId.value = 1;
   currentStepId.value = 1;
