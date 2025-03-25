@@ -3,7 +3,7 @@ import type {MenuItem} from "primevue/menuitem";
 import NavDrawer from "~/components/NavDrawer.vue";
 
 const config = useRuntimeConfig()
-const title = ref("Entscheidungshilfe HTL Rennweg | GuideIT");
+const title = ref("GuideIT");
 const description = ref("Erfahre mehr über die IT-Abteilungen und Vertiefungen der HTL Rennweg. Finde heraus, welche Fachrichtung am besten zu dir passt.");
 //const videoId = ref("");
 

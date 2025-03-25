@@ -202,7 +202,7 @@ async function reset() {
                 :class="getResultByIndex(1).category === 'nwt' ? 'text-nwt-default' : getResultByIndex(1).category === 'webt' ? 'text-medt-wt-default' : 'text-medt-mm-default'">
                 {{ getResultByIndex(1).text }}</NuxtLink> zu dir!
             </p>
-            <p class="mt-5 lg:mt-10">Informiere dich aber gerne nochmal über alle Zweige und erfahre mehr <br> duch
+            <p class="mt-5 lg:mt-10">Informiere dich aber gerne nochmal über alle Zweige und erfahre mehr <br> durch
               unsere
               interaktive Videoreihe!</p>
             <div class="flex mt-4 lg:mt-8">
