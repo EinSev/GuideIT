@@ -61,7 +61,7 @@
             },
             {
               "id": 5,
-              "answer": "Multimedia-Projekte umsetzen zu können",
+              "answer": "Die Möglichkeit meine eigenen Multimedia-Projekte umsetzen zu können",
               "value": "multi"
             }
           ]
@@ -72,27 +72,27 @@
           "answers": [
             {
               "id": 1,
-              "answer": "Technisches Verständnis und Problemlösungsfähigkeiten",
+              "answer": "Technisches Verständnis für Netzwerke und Problemlösungsfähigkeiten",
               "value": "nwt"
             },
             {
               "id": 2,
-              "answer": "Organisation und effizientes Arbeiten an komplexen Aufgaben",
+              "answer": "Organisation und effizientes Arbeiten, um übersichtliche Backendstrukturen zu erstellen",
               "value": "nwt-webt"
             },
             {
               "id": 3,
-              "answer": "Vielseitigkeit und die Fähigkeit, mehrere Perspektiven zu kombinieren",
+              "answer": "Vielseitigkeit und die Fähigkeit, mit der ich eine Webseite erstellen kann",
               "value": "webt"
             },
             {
               "id": 4,
-              "answer": "Die Fähigkeit, kreative und technische Herausforderungen zu kombinieren",
+              "answer": "Die Fähigkeit, kreative und technische Herausforderungen in einem Design zu kombinieren",
               "value": "webt-multi"
             },
             {
               "id": 5,
-              "answer": "Kreativität und das Brainstormen von neuen Ideen",
+              "answer": "Kreativität und das Brainstormen von neuen Ideen für multimediale Projekte",
               "value": "multi"
             }
           ]
@@ -136,27 +136,27 @@
           "answers": [
             {
               "id": 1,
-              "answer": "Ich zieh die Kabel hinter den Kulissen",
+              "answer": "Ich zieh die Kabel hinter den Kulissen und richte Firewalls ein",
               "value": "nwt"
             },
             {
               "id": 2,
-              "answer": "Irgendwas am programmieren – am liebsten im Backend",
+              "answer": "Ich programmiere API-Schnittstellen im Backend ",
               "value": "nwt-webt"
             },
             {
               "id": 3,
-              "answer": "Als Full-Stack-Entwickler*in – ein*e Allrounder*in",
+              "answer": "Als Full-Stack-Entwickler*in entwickle ich SaaS-Webseiten",
               "value": "webt"
             },
             {
               "id": 4,
-              "answer": "In der Frontend-Entwicklung",
+              "answer": "In der Frontend-Entwicklung gestalte und programmiere ich benutzerfreundliche Oberflächen",
               "value": "webt-multi"
             },
             {
               "id": 5,
-              "answer": "In der Kreativbranche",
+              "answer": "In der Kreativbranche wo ich meiner Kreativität in Multimediaprojekten freien Lauf lassen kann",
               "value": "multi"
             }
           ]
@@ -293,12 +293,12 @@
           "answers": [
             {
               "id": 1,
-              "answer": "Ich arbeite strukturiert und mit klaren technischen Anforderungen",
+              "answer": "Ich arbeite strukturiert und mit klaren technischen Netzwerk-Anforderungen",
               "value": "nwt"
             },
             {
               "id": 2,
-              "answer": "Systematisches Problemlösen und Entwicklung bringen mich weiter",
+              "answer": "Systematisches Problemlösen während der Entwicklung bringen mich weiter",
               "value": "nwt-webt"
             },
             {
@@ -308,7 +308,7 @@
             },
             {
               "id": 4,
-              "answer": "Ich bin flexibel und überlege mir wie das Produkt ausschauen soll",
+              "answer": "Ich bin flexibel und überlege mir wie das Design vom Produkt ausschauen soll",
               "value": "webt-multi"
             },
             {
@@ -320,37 +320,6 @@
         },
         {
           "id": 2,
-          "question": "Wie gehst du an ein neues Projekt heran?",
-          "answers": [
-            {
-              "id": 1,
-              "answer": "Ich analysiere zuerst die technische Infrastruktur",
-              "value": "nwt"
-            },
-            {
-              "id": 2,
-              "answer": "Ich überlege mir, wie die Daten und Prozesse organisiert werden müssen",
-              "value": "nwt-webt"
-            },
-            {
-              "id": 3,
-              "answer": "Ich starte mit dem Aufbau der Anwendung, vom Backend bis zum Frontend",
-              "value": "webt"
-            },
-            {
-              "id": 4,
-              "answer": "Ich kümmere mich um die Animationen und Interaktivität des Projekts",
-              "value": "webt-multi"
-            },
-            {
-              "id": 5,
-              "answer": "Ich erstelle ein Story- oder Moodboard",
-              "value": "multi"
-            }
-          ]
-        },
-        {
-          "id": 3,
           "question": "Wie stellst du dir dein zukünftiges Arbeitsumfeld vor?",
           "answers": [
             {
@@ -381,38 +350,38 @@
           ]
         },
         {
-          "id": 4,
+          "id": 3,
           "question": "Wie gehst du mit Herausforderungen um?",
           "answers": [
             {
               "id": 1,
-              "answer": "Ich analysiere, finde Schwachstellen und optimiere sie",
+              "answer": "Ich analysiere, finde die Netzwerk-Schwachstellen und optimiere sie",
               "value": "nwt"
             },
             {
               "id": 2,
-              "answer": "Ich strukturiere Prozesse und entwickle effiziente Lösungen",
+              "answer": "Ich überprüfe welche Daten die von mir entwickelte API zurückliefet",
               "value": "nwt-webt"
             },
             {
               "id": 3,
-              "answer": "Ich baue eine funktionale und nutzerfreundliche Lösung aus",
+              "answer": "Ich durchsuche meinen Code, um den Bug zu finden",
               "value": "webt"
             },
             {
               "id": 4,
-              "answer": "Ich probiere verschiedene Ansätze aus und verfeinere sie",
+              "answer": "Ich probiere den UX-Flow zu verbessern",
               "value": "webt-multi"
             },
             {
               "id": 5,
-              "answer": "Ich experimentiere und lasse mich inspirieren",
+              "answer": "Ich prüfe die Exporteinstellungen meiner Bearbeitungssoftware",
               "value": "multi"
             }
           ]
         },
         {
-          "id": 5,
+          "id": 4,
           "is_intermediate": true,
           "question": "Ist deine Entscheidung abhängig von den Lehrkräften, die du in der Zukunft haben wirst oder nicht mehr haben wirst?",
           "answers": [
