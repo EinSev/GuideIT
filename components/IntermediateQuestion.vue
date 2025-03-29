@@ -45,7 +45,7 @@ function isActive(id: number) {
       <div class="flex justify-between text-text-small lg:text-text">
         <span v-for="answer in question.answers"
           :class="isActive(answer.id) ? 'text-black-default font-semibold' : 'text-black-400 font-normal'">{{
-            answer.answer }}</span>
+          answer.answer }}</span>
       </div>
       <Slider v-model="score" class="w-full py-1 rounded-md" />
     </div>
@@ -55,7 +55,8 @@ function isActive(id: number) {
         <Icon name="material-symbols:arrow-back" size="20" />
         <span>Zurück</span>
       </button>
-      <Message v-if="score === 50">Du musst den Regler bewegen!</Message>
+      <Message v-if="score === 50"
+        :pt="{ root: '!border-black-900 !bg-black-default !text-white-default !outline-black-900 !outline-2'}">Du musst den Regler bewegen!</Message>
       <button @click="$emit('next', score, true)" :disabled="score === 50"
         class="text-guideit-100 border-2 border-guideit-100 bg-guideit-800 hover:bg-guideit-950 rounded-lg pr-1 pl-2 py-1 lg:py-1.5 flex gap-x-2 items-center select-none">
         <span>Weiter</span>
