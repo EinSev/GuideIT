@@ -93,8 +93,8 @@ function loadNext(listOrScore: Answer[] | number, is_intermediate: boolean = fal
     currentQuestionId.value++;
   } else {
     if (currentStepId.value < (totalSteps.value ?? 0)) {
-      currentStepId.value++;
       currentQuestionId.value = 1;
+      currentStepId.value++;
     } else {
       router.push("/quiz/results");
     }
