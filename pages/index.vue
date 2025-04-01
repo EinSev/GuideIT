@@ -3,7 +3,7 @@ import type {MenuItem} from "primevue/menuitem";
 import NavDrawer from "~/components/NavDrawer.vue";
 
 const config = useRuntimeConfig()
-const title = ref("Entscheidungshilfe HTL Rennweg | GuideIT");
+const title = ref("GuideIT");
 const description = ref("Erfahre mehr über die IT-Abteilungen und Vertiefungen der HTL Rennweg. Finde heraus, welche Fachrichtung am besten zu dir passt.");
 //const videoId = ref("");
 
@@ -78,7 +78,7 @@ const items = ref<MenuItem[]>([
 
 <template>
   <div>
-    <div class="flex flex-col justify-center items-center mt-5 relative">
+    <div class="flex flex-col justify-center items-center mt-5">
       <div class="flex justify-end lg:justify-center w-full mr-5 md:mr-10 lg:mr-0">
         <div class="hidden lg:flex">
           <Menubar :model="items"

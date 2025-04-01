@@ -1,0 +1,570 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "title": "Persönliche Fragen",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Was machst du am liebsten in deiner Freizeit?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ich tüftle an Netzwerken, IT-Security Problemen und Home Automatisation",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Ich programmiere gerne meine eigenen kleinen Skripte und Anwendungen",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Ich entwickle kleine Web- und App-Projekte",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Ich modelliere gerne kleine 3D-Objekte",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Ich drehe Videos, mache Fotos und bearbeite diese oder gestalte Poster",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "question": "Was motiviert dich am meisten?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Die Möglichkeit, komplexe technische Probleme zu lösen und Systeme effizienter zu gestalten",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Einen stabilen und leistungsfähigen Code zu schreiben, der reibungslos funktioniert",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Die Herausforderung, verschiedene Disziplinen zu verbinden und Allrounder zu sein",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Die Chance, die Benutzererfahrung zu verbessern und die Anwendung benutzerfreundlicher zu gestalten.",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Die Möglichkeit meine eigenen Multimedia-Projekte umsetzen zu können",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "question": "Was würdest du als deine größte Stärke bezeichnen?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Technisches Verständnis für Netzwerke und Problemlösungsfähigkeiten",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Organisation und effizientes Arbeiten, um übersichtliche Backendstrukturen zu erstellen",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Vielseitigkeit und die Fähigkeit, mit der ich eine Webseite erstellen kann",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Die Fähigkeit, kreative und technische Herausforderungen in einem Design zu kombinieren",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Kreativität und das Brainstormen von neuen Ideen für multimediale Projekte",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "is_intermediate": true,
+          "question": "Hat dein*e derzeitige*r KV Einfluss auf deine Entscheidung?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Zukunftsaussichten & Interessen",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Wo siehst du dich in 10 Jahren?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ich zieh die Kabel hinter den Kulissen und richte Firewalls ein",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Ich programmiere API-Schnittstellen im Backend ",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Als Full-Stack-Entwickler*in entwickle ich SaaS-Webseiten",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "In der Frontend-Entwicklung gestalte und programmiere ich benutzerfreundliche Oberflächen",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "In der Kreativbranche wo ich meiner Kreativität in Multimediaprojekten freien Lauf lassen kann",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "question": "Welche dieser Berufe spricht dich am meisten an?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "IT-Sicherheitsspezialist*in oder Netzwerkadministrator*in",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Softwareentwickler*in oder Data Scientist",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Full-Stack-Webentwickler*in",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "3D-Artist*in oder UI/UX-Designer",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Videoeditor*in oder Grafikdesigner*in",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "question": "Was macht dir in der Schule am meisten Spaß?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Netzwerktechnik und IT-Security",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Programmieren und Algorithmen",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Webentwicklung und interaktive Anwendungen",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "3D und Grafik- & Gestaltung",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Bild- und Videobearbeitung",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "question": "Welches dieser Werkzeuge oder Programme findest du am spannendsten?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Wireshark oder Nmap zur Analyse von Netzwerken",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Datenbanken oder Backend-Technologien wie MySQL und Symfony",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Vue.js, React oder andere moderne Web-Frameworks",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Adobe After Effects oder 3D-Software für Animationen",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Photoshop, Illustrator oder Premiere Pro für kreatives Arbeiten",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "is_intermediate": true,
+          "question": "Entscheidest du dich aufgrund der Wahl deiner Klassenkolleg*innen?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Arbeitsweise & Arbeitsumfeld",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Wie arbeitest du am liebsten?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ich arbeite strukturiert und mit klaren technischen Netzwerk-Anforderungen",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Systematisches Problemlösen während der Entwicklung bringen mich weiter",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Gib mir die Idee und ich mach dir die Webseite oder App dazu",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Ich bin flexibel und überlege mir wie das Design vom Produkt ausschauen soll",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Ich kombiniere visuelle Elemente, um Erlebnisse zu erstellen",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "question": "Wie stellst du dir dein zukünftiges Arbeitsumfeld vor?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ein Raum voller Technik oder ein gut gekühlter Serverraum",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Ein Team, das Netzwerke und Software eng miteinander verbindet",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Ein agiles Entwicklerteam, das Apps und Webseiten baut",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Ein kreativer Workspace, in dem Design und Technik kombiniert werden",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Ein Studio mit Kameras, Greenscreens und Grafik-Tablets",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "question": "Wie gehst du mit Herausforderungen um?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ich analysiere, finde die Netzwerk-Schwachstellen und optimiere sie",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Ich überprüfe welche Daten die von mir entwickelte API zurückliefet",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Ich durchsuche meinen Code, um den Bug zu finden",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Ich probiere den UX-Flow zu verbessern",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Ich prüfe die Exporteinstellungen meiner Bearbeitungssoftware",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "is_intermediate": true,
+          "question": "Ist deine Entscheidung abhängig von den Lehrkräften, die du in der Zukunft haben wirst oder nicht mehr haben wirst?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "In der Praxis",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Es muss eine Webseite umgesetzt werden. Welchen Bereich übernimmst du?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ich kümmere mich um die technische Struktur und die Security",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Ich richte den Server ein!",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Ich programmiere die Website",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Ich entwickle ein modernes, benutzerfreundliches Design",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Ich gestalte das Layout und entwickle coole Animationen oder Visuals",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "question": "Du willst ein Projekt in deiner Freizeit umsetzen (Budget egal). Was setzt du um?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ich statte mein Zuhause mit Home-Automatisation aus",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Ich baue eine API für ein Thema meiner Wahl",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Ich entwickle ein Full-Stack-Projekt mit allem, was dazugehört",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Eine kleine Webapp die ein Problem löst",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Einen Kurzfilm über die Musikbranche",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "question": "Stell dir vor, du arbeitest an einem großen Festival. Welche Aufgabe übernimmst du?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Ich kümmere mich um die technische Infrastruktur und das Netzwerk.",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Ich sorge dafür, dass die Software hinter den Kulissen reibungslos läuft",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Ich setze die Webseite inklusive Ticketverkauf-System um",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Ich modelliere ein Maskottchen in Blender",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Ich mach die Eventtechnik, drehe den Aftermovie und vermarkte das Festival",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "question": "Du arbeitest in einem Unternehmen und du kannst eine Weiterbildung machen – was wählst du?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Meine nächste Cisco-Zertifizierung",
+              "value": "nwt"
+            },
+            {
+              "id": 2,
+              "answer": "Das Training und die Prüfung für ein Google/AWS Cloud Certificate",
+              "value": "nwt-webt"
+            },
+            {
+              "id": 3,
+              "answer": "Einen Einführungskurs in ein neues Framework",
+              "value": "webt"
+            },
+            {
+              "id": 4,
+              "answer": "Einen Lehrgang von Animation Mentor oder der NNGroup",
+              "value": "webt-multi"
+            },
+            {
+              "id": 5,
+              "answer": "Adobe's neuen Kurs zum Thema „Postproduction wie im Film“",
+              "value": "multi"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "is_intermediate": true,
+          "question": "Haben deine Eltern Einfluss auf deine Wahl?",
+          "answers": [
+            {
+              "id": 1,
+              "answer": "Nein",
+              "value": "nein"
+            },
+            {
+              "id": 2,
+              "answer": "Eher nein",
+              "value": "eher-nein"
+            },
+            {
+              "id": 3,
+              "answer": "Eher ja",
+              "value": "eher-ja"
+            },
+            {
+              "id": 4,
+              "answer": "Ja",
+              "value": "ja"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
