@@ -49,13 +49,17 @@ function isActive(id: number) {
       </div>
       <Slider v-model="score" class="w-full py-1 rounded-md" />
     </div>
-    <div class="flex justify-between w-full lg:w-1/2 mt-52 lg:mt-48">
+    <div class="mt-40 mb-2 h-12 md:hidden">
+      <Message v-if="score === 50"
+        :pt="{ root: '!border-black-900 !bg-black-default !text-white-default !outline-black-900 !outline-2'}">Du musst den Regler bewegen!</Message>
+    </div>
+    <div class="flex justify-between w-full lg:w-1/2 md:mt-48">
       <button @click="$emit('back', score, true)"
         class="bg-guideit-50 hover:bg-guideit-200 text-guideit-800 border-2 border-guideit-400 rounded-lg pl-1 pr-2 py-1 lg:py-1.5 flex gap-x-2 items-center select-none">
         <Icon name="material-symbols:arrow-back" size="20" />
         <span>Zurück</span>
       </button>
-      <Message v-if="score === 50"
+      <Message v-if="score === 50" class="max-md:hidden"
         :pt="{ root: '!border-black-900 !bg-black-default !text-white-default !outline-black-900 !outline-2'}">Du musst den Regler bewegen!</Message>
       <button @click="$emit('next', score, true)" :disabled="score === 50"
         class="text-guideit-100 border-2 border-guideit-100 bg-guideit-800 hover:bg-guideit-950 rounded-lg pr-1 pl-2 py-1 lg:py-1.5 flex gap-x-2 items-center select-none">
