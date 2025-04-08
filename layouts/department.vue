@@ -15,7 +15,7 @@
         <slot name="title"/>
       </h1>
     </div>
-    <div id="video" class="w-full px-[2vw] md:px-[5vw] lg:px-[10vw] xl:px-[16vw] mt-10">
+    <div id="video" class="w-full md:px-[5vw] lg:px-[10vw] xl:px-[16vw] mt-10">
       <slot name="video"/>
     </div>
     <div class="text-text mt-10">
