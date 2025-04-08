@@ -4,7 +4,7 @@ import type {MenuItem} from "primevue/menuitem";
 const config = useRuntimeConfig()
 const title = ref("Medientechnik | GuideIT");
 const description = ref("Erfahre mehr über die Medientechnik-Vertiefung an der HTL Rennweg. Lerne über Web- und App-Entwicklung, Mediendesign & Medienproduktionen und mehr.");
-const videoId = ref("ikWTwNKjJ7U");
+const videoId = ref("q8p3VPjxfBg");
 
 useSeoMeta({
   ogUrl: () => config.URL + "/medt",
