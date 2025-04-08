@@ -5,7 +5,7 @@ import NavDrawer from "~/components/NavDrawer.vue";
 const config = useRuntimeConfig()
 const title = ref("GuideIT");
 const description = ref("Erfahre mehr über die IT-Abteilungen und Vertiefungen der HTL Rennweg. Finde heraus, welche Fachrichtung am besten zu dir passt.");
-//const videoId = ref("");
+const videoId = ref("pFYQFtOKSic");
 
 useSeoMeta({
   ogUrl: () => config.URL as string,
@@ -14,8 +14,8 @@ useSeoMeta({
   ogTitle: title.value,
   description,
   ogDescription: description.value,
-  ogVideoUrl: () => "https://youtu.be/pFYQFtOKSic",
-  ogVideoSecureUrl: () => "https://youtu.be/pFYQFtOKSic",
+  ogVideoUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
+  ogVideoSecureUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
   ogVideoAlt: "Einführungsvideo zu GuideIT",
   colorScheme: "only light",
   twitterCard: "player",
@@ -91,7 +91,7 @@ const items = ref<MenuItem[]>([
         <SvgoLogoWithSlogan class="w-72 md:w-96 lg:w-80 xl:w-96 mt-5 md:mt-10 !-z-20" :fontControlled="false" filled />
       </div>
       <div id="video" class="w-full px-[10vw] md:px-[14vw] lg:px-[20vw] xl:px-[30vw] mt-10 md:mt-10">
-        <VideoIframe embedId="pFYQFtOKSic?si=8GttV2-hOGWVqJSJ" />
+        <VideoIframe :embedId="videoId" />
       </div>
       <div
         class="flex flex-col sm:flex-row justify-center md:justify-between w-full mt-10 px-[10vw] md:px-[14vw] lg:px-[12vw] xl:px-[24vw] gap-x-5 gap-y-8">

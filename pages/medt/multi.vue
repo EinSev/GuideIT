@@ -5,6 +5,7 @@ import NavDrawer from "~/components/NavDrawer.vue";
 const config = useRuntimeConfig()
 const title = ref("Mediendesign & Medienproduktionen | GuideIT");
 const description = ref("Erfahre mehr über die Mediendesign & Medienproduktion-Spezialisierung an der HTL Rennweg. Lerne über Foto, Video, Gestaltung und mehr.");
+const videoId = ref("ifkx0LSs6EY")
 
 useSeoMeta({
   ogUrl: () => config.URL + "/medt/multi",
@@ -15,8 +16,8 @@ useSeoMeta({
   ogDescription: description.value,
   ogImageUrl: "/seo/multi.png",
   ogImageAlt: "Eine Illustration eines Videodrehes mit mehreren Personen.",
-  ogVideoUrl: () => "https://youtu.be/ifkx0LSs6EY",
-  ogVideoSecureUrl: () => "https://youtu.be/ifkx0LSs6EY",
+  ogVideoUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
+  ogVideoSecureUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
   ogVideoAlt: "Ein Video über die Mediendesign & Medienproduktionen-Spezialisierung an der HTL Rennweg",
   colorScheme: "only light",
   twitterCard: "player",
@@ -92,7 +93,7 @@ const items = ref<MenuItem[]>([
       <template #title><span class="text-medt-mm-default hyphens-auto leading-none">Mediendesign &
           Medienproduktionen</span></template>
       <template #video>
-        <VideoIframe embed-id="ifkx0LSs6EY?si=sE__rFQ_xA4UBbuy" />
+        <VideoIframe :embed-id="videoId" />
       </template>
       <template #content-1>Wenn du dich in der 3. Klasse für die Vertiefung
         <NuxtLink to="/medt" class="underline text-medt-default font-medium">Medientechnik</NuxtLink>

@@ -4,6 +4,7 @@ import type {MenuItem} from "primevue/menuitem";
 const config = useRuntimeConfig()
 const title = ref("Netzwerktechnik | GuideIT");
 const description = ref("Erfahre mehr über die Netzwerktechnik-Ausbildung an der HTL Rennweg. Lerne über Routing, Switching, Cyber Security und mehr.");
+const videoId = ref("DU2NpKI-tFg")
 
 useSeoMeta({
   ogUrl: () => config.URL + "/nwt",
@@ -14,8 +15,8 @@ useSeoMeta({
   ogDescription: description.value,
   ogImageUrl: "/seo/nwt.png",
   ogImageAlt: "Eine Illustration einer Person, die an einem Serverschrank arbeitet.",
-  ogVideoUrl: () => "https://www.youtube.com/watch?v=DU2NpKI-tFg",
-  ogVideoSecureUrl: () => "https://www.youtube.com/watch?v=DU2NpKI-tFg",
+  ogVideoUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
+  ogVideoSecureUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
   ogVideoAlt: "Ein Video über die Netzwerktechnik-Abteilung an der HTL Rennweg",
   colorScheme: "only light",
   twitterCard: "player",
@@ -119,7 +120,7 @@ const items = ref<MenuItem[]>([
       </template>
       <template #title><span class="text-nwt-default ">Netzwerktechnik</span></template>
       <template #video>
-        <VideoIframe embedId="DU2NpKI-tFg?si=ebO1NimGy-lIbQwD"/>
+        <VideoIframe :embedId="videoId"/>
       </template>
           <template #content-1>In der dritten Klasse kannst du dich für die Vertiefung Netzwerktechnik für die kommenden
             Jahre entscheiden. In der Netzwerktechnik gibt es keine weiteren Spezialisierungen — die ganze Klasse lernt

@@ -4,6 +4,7 @@ import type {MenuItem} from "primevue/menuitem";
 const config = useRuntimeConfig()
 const title = ref("Web- und App-Entwicklung | GuideIT");
 const description = ref("Erfahre mehr über die Web- und App-Entwicklung-Spezialisierung an der HTL Rennweg. Lerne über Symfony, Apps, CMS und mehr.");
+const videoId = ref("")
 
 useSeoMeta({
   ogUrl: () => config.URL + "/medt/web",
@@ -14,8 +15,8 @@ useSeoMeta({
   ogDescription: description.value,
   ogImageUrl: "/seo/web.png",
   ogImageAlt: "Eine Illustration zweier Person, die an einem Computer arbeiten.",
-  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
-  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
+  //ogVideoUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
+  //ogVideoSecureUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
   //ogVideoAlt: "Ein Video über die Web- und App-Entwicklung-Spezialisierung an der HTL Rennweg",
   colorScheme: "only light",
   twitterCard: "player",
@@ -90,7 +91,7 @@ const items = ref<MenuItem[]>([
       </template>
       <template #title><span class="text-medt-wt-default leading-none">Web- & App-Entwicklung</span></template>
       <template #video>
-        <VideoIframe embed-id="" />
+        <VideoIframe :embed-id="videoId" />
       </template>
       <template #content-1>Wenn du dich in der 3. Klasse für die Vertiefung
         <NuxtLink to="/medt" class="underline text-medt-default font-medium">Medientechnik</NuxtLink>

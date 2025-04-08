@@ -4,6 +4,7 @@ import type {MenuItem} from "primevue/menuitem";
 const config = useRuntimeConfig()
 const title = ref("Medientechnik | GuideIT");
 const description = ref("Erfahre mehr über die Medientechnik-Vertiefung an der HTL Rennweg. Lerne über Web- und App-Entwicklung, Mediendesign & Medienproduktionen und mehr.");
+const videoId = ref("ikWTwNKjJ7U");
 
 useSeoMeta({
   ogUrl: () => config.URL + "/medt",
@@ -14,8 +15,8 @@ useSeoMeta({
   ogDescription: description.value,
   ogImageUrl: "/seo/medt.png",
   ogImageAlt: "Eine Illustration einer Person, die an einem Computer arbeitet.",
-  ogVideoUrl: () => "https://youtu.be/ikWTwNKjJ7U",
-  ogVideoSecureUrl: () => "https://youtu.be/ikWTwNKjJ7U",
+  ogVideoUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
+  ogVideoSecureUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
   ogVideoAlt: "Ein Video über die Medientechnik-Vertiefung an der HTL Rennweg",
   colorScheme: "only light",
   twitterCard: "player",
@@ -119,7 +120,7 @@ const items = ref<MenuItem[]>([
       </template>
       <template #title><span class="text-medt-default ">Medientechnik</span></template>
       <template #video>
-        <VideoIframe embed-id="ikWTwNKjJ7U?si=muJV4TI05Uqu3frU" />
+        <VideoIframe :embed-id="videoId" />
       </template>
       <template #content-1>In der dritten Klasse kannst du dich für die <b>Vertiefung Medientechnik</b> für die 4.-5.
         Klasse
