@@ -4,7 +4,7 @@ import type {MenuItem} from "primevue/menuitem";
 const config = useRuntimeConfig()
 const title = ref("Medientechnik | GuideIT");
 const description = ref("Erfahre mehr über die Medientechnik-Vertiefung an der HTL Rennweg. Lerne über Web- und App-Entwicklung, Mediendesign & Medienproduktionen und mehr.");
-//const videoId = ref("");
+const videoId = ref("q8p3VPjxfBg");
 
 useSeoMeta({
   ogUrl: () => config.URL + "/medt",
@@ -15,9 +15,9 @@ useSeoMeta({
   ogDescription: description.value,
   ogImageUrl: "/seo/medt.png",
   ogImageAlt: "Eine Illustration einer Person, die an einem Computer arbeitet.",
-  //ogVideoUrl: () => "http://www.youtube.com/watch/?v=" + videoId.value,
-  //ogVideoSecureUrl: () => "https://www.youtube.com/watch/?v=" + videoId.value,
-  //ogVideoAlt: "Ein Video über die Medientechnik-Vertiefung an der HTL Rennweg",
+  ogVideoUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
+  ogVideoSecureUrl: () => `https://www.youtube.com/embed/${videoId.value}`,
+  ogVideoAlt: "Ein Video über die Medientechnik-Vertiefung an der HTL Rennweg",
   colorScheme: "only light",
   twitterCard: "player",
 });
@@ -85,14 +85,13 @@ const items = ref<MenuItem[]>([
       <template #nav>
         <div class="hidden lg:flex">
           <Menubar :model="items"
-                   class="!rounded-3xl !bg-white-default !py-1 !px-2 !border-medt-default !font-league-spartan !z-50 !shadow-medt-200 !shadow-md"
-                   :pt="{ item: '!focus:bg-white !active:bg-white-default !bg-none', itemContent: '!focus:bg-white-default !active:bg-white-default !bg-white-default', submenu: '!focus:bg-white-default !active:bg-white-default !bg-white-default !group-hover:underline !border-medt-default !z-50', itemLabel: '!text-black-default !text-lg group-hover:underline', itemLink: '!p-0 !py-1 !px-3'}"/>
+            class="!rounded-3xl !bg-white-default !py-1 !px-2 !border-medt-default !font-league-spartan !z-50 !shadow-medt-200 !shadow-md"
+            :pt="{ item: '!focus:bg-white !active:bg-white-default !bg-none', itemContent: '!focus:bg-white-default !active:bg-white-default !bg-white-default', submenu: '!focus:bg-white-default !active:bg-white-default !bg-white-default !group-hover:underline !border-medt-default !z-50', itemLabel: '!text-black-default !text-lg group-hover:underline', itemLink: '!p-0 !py-1 !px-3'}" />
         </div>
         <div class="lg:hidden">
           <Drawer v-model:visible="visible" position="right"
-                  class="!bg-white-default !text-black-default !w-72 !font-league-spartan"
-                  :pt="{header: '!pl-0 !pb-0'}">
-            <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default"/></template>
+            class="!bg-white-default !text-black-default !w-72 !font-league-spartan" :pt="{header: '!pl-0 !pb-0'}">
+            <template #closeicon><i class="pi pi-angle-left !text-4xl !text-black-default" /></template>
             <div>
               <ul class="flex flex-col justify-end text-sub-heading-small text-end text-guideit-800">
                 <li class="mb-2">
@@ -116,27 +115,12 @@ const items = ref<MenuItem[]>([
               </ul>
             </div>
           </Drawer>
-          <button @click="visible = true" aria-label="Open menu" aria-expanded="visible"><span
-              class="pi pi-bars !text-3xl"></span></button>
+          <button @click="visible = true" aria-label="Open menu"><span class="pi pi-bars !text-3xl"></span></button>
         </div>
       </template>
       <template #title><span class="text-medt-default ">Medientechnik</span></template>
       <template #video>
-        <div
-            class="w-full aspect-video bg-medt-200 border-2 rounded border-medt-default flex items-center justify-center"><span
-            class="text-black-default text-lg md:text-xl">Video ist noch nicht verfügbar!</span></div>
-        <!--
-        <video
-            class="w-full aspect-video bg-black-100"
-            controls
-            preload="metadata"
-            poster="/path/to/poster.jpg"
-        >
-          <source src="/path/to/video.mp4" type="video/mp4">
-          <p>Your browser doesn't support HTML video. Here's a <a href="/path/to/video.mp4">link to the video</a>
-            instead.</p>
-        </video>
-        -->
+        <VideoIframe :embed-id="videoId" />
       </template>
       <template #content-1>In der dritten Klasse kannst du dich für die <b>Vertiefung Medientechnik</b> für die 4.-5.
         Klasse
@@ -150,7 +134,7 @@ const items = ref<MenuItem[]>([
         </NuxtLink>
         Im Stamm- Unterricht erlernen alle die <b>Grundlagen dieser Vertiefungen</b> und zusätzlich etwas über <b>das
           Gestalten
-        und Programmieren von virtuellen Welten</b> und über <b>Grafik & Gestaltung</b>.
+          und Programmieren von virtuellen Welten</b> und über <b>Grafik & Gestaltung</b>.
       </template>
       <template #content-2-header><span class="text-medt-default ">Themenbereiche</span>
       </template>
@@ -159,10 +143,10 @@ const items = ref<MenuItem[]>([
         Daten bis hin zum Designen von Logos und Websitemockups eingegangen wird.
       </template>
       <template #content-2-illustration>
-        <SvgoMedtStudio class="w-[28rem]" :fontControlled="false" filled/>
+        <SvgoMedtStudio class="w-[28rem]" :fontControlled="false" filled />
       </template>
       <template #content-3-illustration>
-        <SvgoMedtProgramming class="w-[22rem]" :fontControlled="false" filled/>
+        <SvgoMedtProgramming class="w-[22rem]" :fontControlled="false" filled />
       </template>
       <template #content-3>In den Grundlagen von
         <NuxtLink to="/medt/web" class="underline text-medt-default font-medium">Web- & App-Entwicklung</NuxtLink>
@@ -177,13 +161,14 @@ const items = ref<MenuItem[]>([
       <template #content-4-header><span class="text-medt-default">Zusätzliche Fächer</span>
       </template>
       <template #content-4>Allgemein hast du in der Abteilung Medientechnik auch weiterhin bereits bekannte
-        Fächer wie <b>INSY</b> (Informationssysteme) und <b>SEW</b> (Softwareentwicklung). SEW orientiert sich dann jedoch in Richtung Web und konzentriert
-          sich auf das Frontendframework Vue.js und Springboot für die Entwicklung eines Backends. In <b>ITP</b>
+        Fächer wie <b>INSY</b> (Informationssysteme) und <b>SEW</b> (Softwareentwicklung). SEW orientiert sich dann
+        jedoch in Richtung Web und konzentriert
+        sich auf das Frontendframework Vue.js und Springboot für die Entwicklung eines Backends. In <b>ITP</b>
         (Informationstechnische Projekte) wendest du dein erlerntes Wissen dann in
         eigenen kleinen Projekten mit der Hilfe von Projektmanagementmethoden wie Wasserfall und Scrum an.
       </template>
       <template #content-4-illustration>
-        <SvgoMedtTeam class="w-[28rem]" :fontControlled="false" filled/>
+        <SvgoMedtTeam class="w-[28rem]" :fontControlled="false" filled />
       </template>
     </NuxtLayout>
   </div>
