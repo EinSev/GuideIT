@@ -4,7 +4,6 @@ import type {MenuItem} from "primevue/menuitem";
 const config = useRuntimeConfig()
 const title = ref("Web- und App-Entwicklung | GuideIT");
 const description = ref("Erfahre mehr über die Web- und App-Entwicklung-Spezialisierung an der HTL Rennweg. Lerne über Symfony, Apps, CMS und mehr.");
-//const videoId = ref("");
 
 useSeoMeta({
   ogUrl: () => config.URL + "/medt/web",
@@ -91,21 +90,7 @@ const items = ref<MenuItem[]>([
       </template>
       <template #title><span class="text-medt-wt-default leading-none">Web- & App-Entwicklung</span></template>
       <template #video>
-        <div
-            class="w-full aspect-video bg-medt-wt-200 border-2 rounded border-medt-wt-default flex items-center justify-center"><span
-            class="text-black-default text-lg md:text-xl">Video ist noch nicht verfügbar!</span></div>
-        <!--
-        <video
-            class="w-full aspect-video bg-black-100"
-            controls
-            preload="metadata"
-            poster="/path/to/poster.jpg"
-        >
-          <source src="/path/to/video.mp4" type="video/mp4">
-          <p>Your browser doesn't support HTML video. Here's a <a href="/path/to/video.mp4">link to the video</a>
-            instead.</p>
-        </video>
-        -->
+        <VideoIframe embed-id="" />
       </template>
       <template #content-1>Wenn du dich in der 3. Klasse für die Vertiefung
         <NuxtLink to="/medt" class="underline text-medt-default font-medium">Medientechnik</NuxtLink>
